@@ -1,0 +1,68 @@
+aid: freshbooks
+name: FreshBooks
+description: >-
+  FreshBooks is a cloud-based accounting and small business management platform
+  offering invoicing, expense tracking, time tracking, project management,
+  payments, estimates, and financial reporting for freelancers, self-employed
+  professionals, and small businesses. The FreshBooks REST API provides access
+  to clients, invoices, expenses, estimates, projects, time entries, payments,
+  and reports using OAuth 2.0 Bearer token authentication.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Accounting
+  - Invoicing
+  - Expense Tracking
+  - Time Tracking
+  - Small Business
+  - Bookkeeping
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: freshbooks:freshbooks-api
+    name: FreshBooks REST API
+    description: >-
+      REST API for FreshBooks providing CRUD access to clients, invoices,
+      estimates, expenses, projects, time entries, tasks, payments, items,
+      taxes, and accounting reports. Uses OAuth 2.0 Bearer tokens and is
+      scoped per account via /accounting/account/{accountId}/* endpoints.
+    humanURL: https://www.freshbooks.com/api/start
+    baseURL: https://api.freshbooks.com
+    tags:
+      - Accounting
+      - Invoicing
+      - Expenses
+      - Time Tracking
+      - Projects
+    properties:
+      - type: Documentation
+        url: https://www.freshbooks.com/api/start
+      - type: Authentication
+        url: https://www.freshbooks.com/api/authentication
+      - type: Postman Collection
+        url: https://www.freshbooks.com/api/start
+common:
+  - type: Website
+    url: https://www.freshbooks.com
+  - type: Documentation
+    url: https://www.freshbooks.com/api/start
+  - type: Developer Portal
+    url: https://www.freshbooks.com/developers
+  - type: Sign Up
+    url: https://www.freshbooks.com/signup
+  - type: Pricing
+    url: https://www.freshbooks.com/pricing
+  - type: Login
+    url: https://my.freshbooks.com/
+  - type: Support
+    url: https://support.freshbooks.com/
+  - type: Blog
+    url: https://www.freshbooks.com/blog
+  - type: GitHub Organization
+    url: https://github.com/freshbooks
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
