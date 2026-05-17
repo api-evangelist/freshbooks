@@ -51,7 +51,7 @@ common:
     url: https://www.freshbooks.com/api/start
   - type: Developer Portal
     url: https://www.freshbooks.com/developers
-  - type: Sign Up
+  - type: SignUp
     url: https://www.freshbooks.com/signup
   - type: Pricing
     url: https://www.freshbooks.com/pricing
@@ -61,7 +61,7 @@ common:
     url: https://support.freshbooks.com/
   - type: Blog
     url: https://www.freshbooks.com/blog
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/freshbooks
 maintainers:
   - FN: Kin Lane
