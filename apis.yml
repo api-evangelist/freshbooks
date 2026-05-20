@@ -45,6 +45,8 @@ apis:
       - type: Postman Collection
         url: https://www.freshbooks.com/api/start
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/freshbooks
   - type: Website
     url: https://www.freshbooks.com
   - type: Documentation
