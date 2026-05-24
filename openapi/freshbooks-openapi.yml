@@ -1,0 +1,313 @@
+openapi: 3.1.0
+info:
+  title: FreshBooks REST API
+  version: "2026-05-23"
+  description: |
+    Best-effort OpenAPI 3.1 description of the FreshBooks accounting REST API.
+    Scoped per account via /accounting/account/{accountId}/* paths.
+    Generated from public documentation; not an official spec.
+  contact:
+    name: FreshBooks Developer Portal
+    url: https://www.freshbooks.com/api/start
+servers:
+  - url: https://api.freshbooks.com
+    description: Production
+security:
+  - bearerAuth: []
+tags:
+  - name: Clients
+  - name: Invoices
+  - name: Expenses
+  - name: Estimates
+  - name: Projects
+  - name: TimeEntries
+  - name: Payments
+  - name: Items
+  - name: Taxes
+  - name: Tasks
+paths:
+  /auth/api/v1/users/me:
+    get:
+      operationId: getCurrentUser
+      summary: Identity of the authenticated user
+      responses:
+        "200":
+          description: Current user identity
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Object" }
+  /accounting/account/{accountId}/users/clients:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Clients]
+      operationId: listClients
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Clients]
+      operationId: createClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/users/clients/{clientId}:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+      - in: path
+        name: clientId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Clients]
+      operationId: getClient
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    put:
+      tags: [Clients]
+      operationId: updateClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/invoices/invoices:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Invoices]
+      operationId: listInvoices
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Invoices]
+      operationId: createInvoice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/invoices/invoices/{invoiceId}:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+      - in: path
+        name: invoiceId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Invoices]
+      operationId: getInvoice
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    put:
+      tags: [Invoices]
+      operationId: updateInvoice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/expenses/expenses:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Expenses]
+      operationId: listExpenses
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Expenses]
+      operationId: createExpense
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/expenses/expenses/{expenseId}:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+      - in: path
+        name: expenseId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Expenses]
+      operationId: getExpense
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    put:
+      tags: [Expenses]
+      operationId: updateExpense
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/estimates/estimates:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Estimates]
+      operationId: listEstimates
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Estimates]
+      operationId: createEstimate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /projects/business/{businessId}/projects:
+    parameters:
+      - in: path
+        name: businessId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Projects]
+      operationId: listProjects
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Projects]
+      operationId: createProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /timetracking/business/{businessId}/time_entries:
+    parameters:
+      - in: path
+        name: businessId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [TimeEntries]
+      operationId: listTimeEntries
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [TimeEntries]
+      operationId: createTimeEntry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/payments/payments:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Payments]
+      operationId: listPayments
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Payments]
+      operationId: createPayment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/items/items:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Items]
+      operationId: listItems
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Items]
+      operationId: createItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/taxes/taxes:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Taxes]
+      operationId: listTaxes
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Taxes]
+      operationId: createTax
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+  /accounting/account/{accountId}/projects/tasks:
+    parameters:
+      - $ref: "#/components/parameters/AccountId"
+    get:
+      tags: [Tasks]
+      operationId: listTasks
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+    post:
+      tags: [Tasks]
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Object" }
+      responses:
+        "200": { $ref: "#/components/responses/Ok" }
+components:
+  parameters:
+    AccountId:
+      in: path
+      name: accountId
+      required: true
+      schema: { type: string }
+      description: FreshBooks account identifier (business account id)
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token obtained via the FreshBooks authorization code flow.
+  schemas:
+    Object:
+      type: object
+      additionalProperties: true
+  responses:
+    Ok:
+      description: Successful response
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Object" }
