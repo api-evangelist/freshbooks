@@ -19,7 +19,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: freshbooks:freshbooks-api
@@ -44,6 +44,29 @@ apis:
         url: https://www.freshbooks.com/api/authentication
       - type: Postman Collection
         url: https://www.freshbooks.com/api/start
+  - aid: freshbooks:freshbooks-webhooks
+    name: FreshBooks Webhooks (Callbacks API)
+    description: >-
+      Event delivery surface for the FreshBooks Callbacks API. Subscribers
+      register an HTTPS endpoint, complete a verifier handshake, and then
+      receive HMAC-SHA256 signed POSTs (application/x-www-form-urlencoded)
+      for noun.verb events across bills, bill vendors, categories, clients,
+      credit notes, estimates, expenses, invoices, items, payments, projects,
+      recurring templates, services, taxes, and time entries.
+    humanURL: https://www.freshbooks.com/api/webhooks
+    baseURL: https://api.freshbooks.com
+    tags:
+      - Webhooks
+      - Events
+      - Callbacks
+      - Accounting
+      - Invoicing
+    properties:
+      - type: Documentation
+        url: https://www.freshbooks.com/api/webhooks
+      - type: AsyncAPI
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml
 common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/freshbooks

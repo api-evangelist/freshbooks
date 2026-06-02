@@ -1,0 +1,854 @@
+asyncapi: 2.6.0
+info:
+  title: FreshBooks Webhooks (Callbacks API)
+  version: "2026-05-30"
+  description: |
+    Best-effort AsyncAPI 2.6 description of the FreshBooks Webhooks (Callbacks API)
+    surface. FreshBooks delivers webhook notifications as HTTP POST requests with an
+    `application/x-www-form-urlencoded` body whenever a subscribed event occurs on
+    a FreshBooks account. Each delivery is signed with an HMAC-SHA256 signature
+    derived from the verifier code returned at callback registration.
+
+    Generated from public documentation at https://www.freshbooks.com/api/webhooks;
+    not an official spec.
+  contact:
+    name: FreshBooks Developer Portal
+    url: https://www.freshbooks.com/api/webhooks
+defaultContentType: application/x-www-form-urlencoded
+servers:
+  subscriber:
+    url: "{webhookUrl}"
+    protocol: https
+    description: |
+      The HTTPS endpoint registered by the subscriber when creating a FreshBooks
+      callback. FreshBooks POSTs event notifications to this URL. The endpoint
+      must respond with a 2xx status within 10 seconds.
+    variables:
+      webhookUrl:
+        default: https://example.com/webhooks/freshbooks
+        description: Subscriber-controlled HTTPS endpoint registered with FreshBooks.
+channels:
+  freshbooks/events:
+    description: |
+      Single delivery channel used by FreshBooks for all callback notifications.
+      The specific event is identified by the `name` form field in the body
+      (e.g. `invoice.create`). FreshBooks signs every delivery with an
+      `X-FreshBooks-Hmac-SHA256` header computed over the UTF-8 encoded JSON
+      string of the request parameters using the verifier code as the secret.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    publish:
+      operationId: receiveFreshBooksEvent
+      summary: Receive a FreshBooks webhook event delivery.
+      description: |
+        FreshBooks publishes a single message envelope containing the event
+        name and resource identifiers. Subscribers must verify the
+        `X-FreshBooks-Hmac-SHA256` signature before processing.
+      message:
+        oneOf:
+          - $ref: "#/components/messages/BillCreate"
+          - $ref: "#/components/messages/BillUpdate"
+          - $ref: "#/components/messages/BillDelete"
+          - $ref: "#/components/messages/BillVendorCreate"
+          - $ref: "#/components/messages/BillVendorUpdate"
+          - $ref: "#/components/messages/BillVendorDelete"
+          - $ref: "#/components/messages/CategoryCreate"
+          - $ref: "#/components/messages/CategoryUpdate"
+          - $ref: "#/components/messages/CategoryDelete"
+          - $ref: "#/components/messages/ClientCreate"
+          - $ref: "#/components/messages/ClientUpdate"
+          - $ref: "#/components/messages/ClientDelete"
+          - $ref: "#/components/messages/CreditNoteCreate"
+          - $ref: "#/components/messages/CreditNoteUpdate"
+          - $ref: "#/components/messages/CreditNoteDelete"
+          - $ref: "#/components/messages/EstimateCreate"
+          - $ref: "#/components/messages/EstimateUpdate"
+          - $ref: "#/components/messages/EstimateDelete"
+          - $ref: "#/components/messages/EstimateSendByEmail"
+          - $ref: "#/components/messages/ExpenseCreate"
+          - $ref: "#/components/messages/ExpenseUpdate"
+          - $ref: "#/components/messages/ExpenseDelete"
+          - $ref: "#/components/messages/InvoiceCreate"
+          - $ref: "#/components/messages/InvoiceUpdate"
+          - $ref: "#/components/messages/InvoiceDelete"
+          - $ref: "#/components/messages/InvoiceSendByEmail"
+          - $ref: "#/components/messages/ItemCreate"
+          - $ref: "#/components/messages/ItemUpdate"
+          - $ref: "#/components/messages/ItemDelete"
+          - $ref: "#/components/messages/PaymentCreate"
+          - $ref: "#/components/messages/PaymentUpdate"
+          - $ref: "#/components/messages/PaymentDelete"
+          - $ref: "#/components/messages/ProjectCreate"
+          - $ref: "#/components/messages/ProjectUpdate"
+          - $ref: "#/components/messages/ProjectDelete"
+          - $ref: "#/components/messages/RecurringCreate"
+          - $ref: "#/components/messages/RecurringUpdate"
+          - $ref: "#/components/messages/RecurringDelete"
+          - $ref: "#/components/messages/ServiceCreate"
+          - $ref: "#/components/messages/ServiceUpdate"
+          - $ref: "#/components/messages/ServiceDelete"
+          - $ref: "#/components/messages/TaxCreate"
+          - $ref: "#/components/messages/TaxUpdate"
+          - $ref: "#/components/messages/TaxDelete"
+          - $ref: "#/components/messages/TimeEntryCreate"
+          - $ref: "#/components/messages/TimeEntryUpdate"
+          - $ref: "#/components/messages/TimeEntryDelete"
+          - $ref: "#/components/messages/VerificationHandshake"
+components:
+  messageTraits:
+    HmacSignedDelivery:
+      headers:
+        type: object
+        required:
+          - X-FreshBooks-Hmac-SHA256
+          - Content-Type
+        properties:
+          X-FreshBooks-Hmac-SHA256:
+            type: string
+            description: |
+              Base64-encoded HMAC-SHA256 signature of the UTF-8 encoded JSON
+              representation of the request parameters, computed using the
+              verifier code returned by FreshBooks at callback registration as
+              the secret key. Subscribers MUST validate this header before
+              trusting the payload.
+            example: 7XRkjP3a7Q6Z8YyV2K0qf4nN0w1lU4O3Yk4i+E5x8Yc=
+          Content-Type:
+            type: string
+            enum:
+              - application/x-www-form-urlencoded
+            description: Body content type used by FreshBooks for callback deliveries.
+      bindings:
+        http:
+          bindingVersion: 0.3.0
+  schemas:
+    EventPayload:
+      type: object
+      description: |
+        Form-URL-encoded body sent by FreshBooks for every callback delivery.
+        All fields are delivered as strings on the wire; numeric semantics
+        are documented for downstream parsing.
+      required:
+        - name
+        - object_id
+        - account_id
+      properties:
+        name:
+          type: string
+          description: Event identifier in `<noun>.<verb>` form (e.g. `invoice.create`).
+        object_id:
+          type: integer
+          description: Identifier of the FreshBooks resource that triggered the event.
+        account_id:
+          type: string
+          description: FreshBooks account identifier the event belongs to.
+        business_id:
+          type: integer
+          description: FreshBooks business identifier the event belongs to.
+        identity_id:
+          type: integer
+          description: Identity (user) that performed the action.
+        user_id:
+          type: integer
+          description: Deprecated legacy user identifier; prefer `identity_id`.
+      example:
+        name: invoice.create
+        object_id: 1234567
+        account_id: 6BApk
+        business_id: 6543
+        identity_id: 1234
+    VerificationPayload:
+      type: object
+      description: |
+        Initial handshake POST sent by FreshBooks immediately after a callback
+        is registered. The subscriber must capture the `verifier` value and
+        PUT it back to the callback record to activate webhook delivery.
+      required:
+        - name
+        - object_id
+        - verifier
+      properties:
+        name:
+          type: string
+          enum:
+            - callback.verify
+          description: Synthetic event name representing the registration handshake.
+        object_id:
+          type: integer
+          description: Identifier of the callback record being verified.
+        verifier:
+          type: string
+          description: Unique verification code that must be echoed back via PUT.
+        account_id:
+          type: string
+          description: FreshBooks account identifier the callback belongs to.
+  messages:
+    VerificationHandshake:
+      name: VerificationHandshake
+      title: Callback verification handshake
+      summary: Initial verification POST sent after callback registration.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        $ref: "#/components/schemas/VerificationPayload"
+    BillCreate:
+      name: BillCreate
+      title: bill.create
+      summary: A bill was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill.create
+    BillUpdate:
+      name: BillUpdate
+      title: bill.update
+      summary: A bill was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill.update
+    BillDelete:
+      name: BillDelete
+      title: bill.delete
+      summary: A bill was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill.delete
+    BillVendorCreate:
+      name: BillVendorCreate
+      title: bill_vendor.create
+      summary: A bill vendor was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill_vendor.create
+    BillVendorUpdate:
+      name: BillVendorUpdate
+      title: bill_vendor.update
+      summary: A bill vendor was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill_vendor.update
+    BillVendorDelete:
+      name: BillVendorDelete
+      title: bill_vendor.delete
+      summary: A bill vendor was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: bill_vendor.delete
+    CategoryCreate:
+      name: CategoryCreate
+      title: category.create
+      summary: A category was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: category.create
+    CategoryUpdate:
+      name: CategoryUpdate
+      title: category.update
+      summary: A category was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: category.update
+    CategoryDelete:
+      name: CategoryDelete
+      title: category.delete
+      summary: A category was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: category.delete
+    ClientCreate:
+      name: ClientCreate
+      title: client.create
+      summary: A client was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: client.create
+    ClientUpdate:
+      name: ClientUpdate
+      title: client.update
+      summary: A client was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: client.update
+    ClientDelete:
+      name: ClientDelete
+      title: client.delete
+      summary: A client was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: client.delete
+    CreditNoteCreate:
+      name: CreditNoteCreate
+      title: credit_note.create
+      summary: A credit note was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: credit_note.create
+    CreditNoteUpdate:
+      name: CreditNoteUpdate
+      title: credit_note.update
+      summary: A credit note was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: credit_note.update
+    CreditNoteDelete:
+      name: CreditNoteDelete
+      title: credit_note.delete
+      summary: A credit note was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: credit_note.delete
+    EstimateCreate:
+      name: EstimateCreate
+      title: estimate.create
+      summary: An estimate was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: estimate.create
+    EstimateUpdate:
+      name: EstimateUpdate
+      title: estimate.update
+      summary: An estimate was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: estimate.update
+    EstimateDelete:
+      name: EstimateDelete
+      title: estimate.delete
+      summary: An estimate was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: estimate.delete
+    EstimateSendByEmail:
+      name: EstimateSendByEmail
+      title: estimate.sendByEmail
+      summary: An estimate was sent by email.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: estimate.sendByEmail
+    ExpenseCreate:
+      name: ExpenseCreate
+      title: expense.create
+      summary: An expense was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: expense.create
+    ExpenseUpdate:
+      name: ExpenseUpdate
+      title: expense.update
+      summary: An expense was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: expense.update
+    ExpenseDelete:
+      name: ExpenseDelete
+      title: expense.delete
+      summary: An expense was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: expense.delete
+    InvoiceCreate:
+      name: InvoiceCreate
+      title: invoice.create
+      summary: An invoice was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: invoice.create
+    InvoiceUpdate:
+      name: InvoiceUpdate
+      title: invoice.update
+      summary: An invoice was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: invoice.update
+    InvoiceDelete:
+      name: InvoiceDelete
+      title: invoice.delete
+      summary: An invoice was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: invoice.delete
+    InvoiceSendByEmail:
+      name: InvoiceSendByEmail
+      title: invoice.sendByEmail
+      summary: An invoice was sent by email.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: invoice.sendByEmail
+    ItemCreate:
+      name: ItemCreate
+      title: item.create
+      summary: An item was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: item.create
+    ItemUpdate:
+      name: ItemUpdate
+      title: item.update
+      summary: An item was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: item.update
+    ItemDelete:
+      name: ItemDelete
+      title: item.delete
+      summary: An item was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: item.delete
+    PaymentCreate:
+      name: PaymentCreate
+      title: payment.create
+      summary: A payment was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: payment.create
+    PaymentUpdate:
+      name: PaymentUpdate
+      title: payment.update
+      summary: A payment was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: payment.update
+    PaymentDelete:
+      name: PaymentDelete
+      title: payment.delete
+      summary: A payment was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: payment.delete
+    ProjectCreate:
+      name: ProjectCreate
+      title: project.create
+      summary: A project was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: project.create
+    ProjectUpdate:
+      name: ProjectUpdate
+      title: project.update
+      summary: A project was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: project.update
+    ProjectDelete:
+      name: ProjectDelete
+      title: project.delete
+      summary: A project was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: project.delete
+    RecurringCreate:
+      name: RecurringCreate
+      title: recurring.create
+      summary: A recurring template was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: recurring.create
+    RecurringUpdate:
+      name: RecurringUpdate
+      title: recurring.update
+      summary: A recurring template was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: recurring.update
+    RecurringDelete:
+      name: RecurringDelete
+      title: recurring.delete
+      summary: A recurring template was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: recurring.delete
+    ServiceCreate:
+      name: ServiceCreate
+      title: service.create
+      summary: A service was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: service.create
+    ServiceUpdate:
+      name: ServiceUpdate
+      title: service.update
+      summary: A service was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: service.update
+    ServiceDelete:
+      name: ServiceDelete
+      title: service.delete
+      summary: A service was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: service.delete
+    TaxCreate:
+      name: TaxCreate
+      title: tax.create
+      summary: A tax was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: tax.create
+    TaxUpdate:
+      name: TaxUpdate
+      title: tax.update
+      summary: A tax was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: tax.update
+    TaxDelete:
+      name: TaxDelete
+      title: tax.delete
+      summary: A tax was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: tax.delete
+    TimeEntryCreate:
+      name: TimeEntryCreate
+      title: time_entry.create
+      summary: A time entry was created.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: time_entry.create
+    TimeEntryUpdate:
+      name: TimeEntryUpdate
+      title: time_entry.update
+      summary: A time entry was updated.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: time_entry.update
+    TimeEntryDelete:
+      name: TimeEntryDelete
+      title: time_entry.delete
+      summary: A time entry was deleted.
+      contentType: application/x-www-form-urlencoded
+      traits:
+        - $ref: "#/components/messageTraits/HmacSignedDelivery"
+      payload:
+        allOf:
+          - $ref: "#/components/schemas/EventPayload"
+          - type: object
+            properties:
+              name:
+                const: time_entry.delete
