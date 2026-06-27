@@ -42,7 +42,7 @@ apis:
         url: https://www.freshbooks.com/api/start
       - type: Authentication
         url: https://www.freshbooks.com/api/authentication
-      - type: Postman Collection
+      - type: PostmanCollection
         url: https://www.freshbooks.com/api/start
   - aid: freshbooks:freshbooks-webhooks
     name: FreshBooks Webhooks (Callbacks API)
@@ -74,9 +74,9 @@ common:
     url: https://www.freshbooks.com
   - type: Documentation
     url: https://www.freshbooks.com/api/start
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://www.freshbooks.com/developers
-  - type: SignUp
+  - type: Signup
     url: https://www.freshbooks.com/signup
   - type: Pricing
     url: https://www.freshbooks.com/pricing
