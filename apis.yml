@@ -68,6 +68,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml
 common:
+  - type: DomainSecurity
+    url: security/freshbooks-domain-security.yml
+  - type: Authentication
+    url: authentication/freshbooks-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/freshbooks
   - type: Website
