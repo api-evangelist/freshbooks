@@ -68,6 +68,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/freshbooks-agentic-access.yml
   - type: DomainSecurity
     url: security/freshbooks-domain-security.yml
   - type: Authentication
