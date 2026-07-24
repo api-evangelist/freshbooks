@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: FreshBooks REST Auth Items API
+  version: '2026-05-23'
+  description: 'Best-effort OpenAPI 3.1 description of the FreshBooks accounting REST API.
+
+    Scoped per account via /accounting/account/{accountId}/* paths.
+
+    Generated from public documentation; not an official spec.
+
+    '
+  contact:
+    name: FreshBooks Developer Portal
+    url: https://www.freshbooks.com/api/start
+servers:
+- url: https://api.freshbooks.com
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Items
+paths:
+  /accounting/account/{accountId}/items/items:
+    parameters:
+    - $ref: '#/components/parameters/AccountId'
+    get:
+      tags:
+      - Items
+      operationId: listItems
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+    post:
+      tags:
+      - Items
+      operationId: createItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Object'
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+components:
+  schemas:
+    Object:
+      type: object
+      additionalProperties: true
+  responses:
+    Ok:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Object'
+  parameters:
+    AccountId:
+      in: path
+      name: accountId
+      required: true
+      schema:
+        type: string
+      description: FreshBooks account identifier (business account id)
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token obtained via the FreshBooks authorization code flow.
