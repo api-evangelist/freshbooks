@@ -8,7 +8,19 @@ description: >-
   to clients, invoices, expenses, estimates, projects, time entries, payments,
   and reports using OAuth 2.0 Bearer token authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freshbooks.png
 tags:
   - Accounting
   - Invoicing
@@ -22,51 +34,158 @@ created: '2026-05-11'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: freshbooks:freshbooks-api
-    name: FreshBooks REST API
-    description: >-
-      REST API for FreshBooks providing CRUD access to clients, invoices,
-      estimates, expenses, projects, time entries, tasks, payments, items,
-      taxes, and accounting reports. Uses OAuth 2.0 Bearer tokens and is
-      scoped per account via /accounting/account/{accountId}/* endpoints.
-    humanURL: https://www.freshbooks.com/api/start
-    baseURL: https://api.freshbooks.com
-    tags:
-      - Accounting
-      - Invoicing
-      - Expenses
-      - Time Tracking
-      - Projects
-    properties:
-      - type: Documentation
-        url: https://www.freshbooks.com/api/start
-      - type: Authentication
-        url: https://www.freshbooks.com/api/authentication
-      - type: PostmanCollection
-        url: https://www.freshbooks.com/api/start
-  - aid: freshbooks:freshbooks-webhooks
-    name: FreshBooks Webhooks (Callbacks API)
-    description: >-
-      Event delivery surface for the FreshBooks Callbacks API. Subscribers
-      register an HTTPS endpoint, complete a verifier handshake, and then
-      receive HMAC-SHA256 signed POSTs (application/x-www-form-urlencoded)
-      for noun.verb events across bills, bill vendors, categories, clients,
-      credit notes, estimates, expenses, invoices, items, payments, projects,
-      recurring templates, services, taxes, and time entries.
-    humanURL: https://www.freshbooks.com/api/webhooks
-    baseURL: https://api.freshbooks.com
-    tags:
-      - Webhooks
-      - Events
-      - Callbacks
-      - Accounting
-      - Invoicing
-    properties:
-      - type: Documentation
-        url: https://www.freshbooks.com/api/webhooks
-      - type: AsyncAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml
+- aid: freshbooks:freshbooks-api
+  name: FreshBooks REST API
+  description: >-
+    REST API for FreshBooks providing CRUD access to clients, invoices, estimates, expenses, projects,
+    time entries, tasks, payments, items, taxes, and accounting reports. Uses OAuth 2.0 Bearer tokens
+    and is scoped per account via /accounting/account/{accountId}/* endpoints.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Accounting
+  - Invoicing
+  - Expenses
+  - Time Tracking
+  - Projects
+  properties:
+  - type: Documentation
+    url: https://www.freshbooks.com/api/start
+  - type: Authentication
+    url: https://www.freshbooks.com/api/authentication
+  - type: PostmanCollection
+    url: https://www.freshbooks.com/api/start
+- aid: freshbooks:freshbooks-webhooks
+  name: FreshBooks Webhooks (Callbacks API)
+  description: >-
+    Event delivery surface for the FreshBooks Callbacks API. Subscribers register an HTTPS endpoint, complete
+    a verifier handshake, and then receive HMAC-SHA256 signed POSTs (application/x-www-form-urlencoded)
+    for noun.verb events across bills, bill vendors, categories, clients, credit notes, estimates, expenses,
+    invoices, items, payments, projects, recurring templates, services, taxes, and time entries.
+  humanURL: https://www.freshbooks.com/api/webhooks
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Webhooks
+  - Events
+  - Callbacks
+  - Accounting
+  - Invoicing
+  properties:
+  - type: Documentation
+    url: https://www.freshbooks.com/api/webhooks
+  - type: AsyncAPI
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml
+- aid: freshbooks:freshbooks-auth-api
+  name: FreshBooks Auth API
+  description: The Auth API from FreshBooks — 1 operation(s) for auth.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-auth-api-openapi.yml
+- aid: freshbooks:freshbooks-clients-api
+  name: FreshBooks Clients API
+  description: The Clients API from FreshBooks — 2 operation(s) for clients.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Clients
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-clients-api-openapi.yml
+- aid: freshbooks:freshbooks-estimates-api
+  name: FreshBooks Estimates API
+  description: The Estimates API from FreshBooks — 1 operation(s) for estimates.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Estimates
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-estimates-api-openapi.yml
+- aid: freshbooks:freshbooks-expenses-api
+  name: FreshBooks Expenses API
+  description: The Expenses API from FreshBooks — 2 operation(s) for expenses.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Expenses
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-expenses-api-openapi.yml
+- aid: freshbooks:freshbooks-invoices-api
+  name: FreshBooks Invoices API
+  description: The Invoices API from FreshBooks — 2 operation(s) for invoices.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-invoices-api-openapi.yml
+- aid: freshbooks:freshbooks-items-api
+  name: FreshBooks Items API
+  description: The Items API from FreshBooks — 1 operation(s) for items.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Items
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-items-api-openapi.yml
+- aid: freshbooks:freshbooks-payments-api
+  name: FreshBooks Payments API
+  description: The Payments API from FreshBooks — 1 operation(s) for payments.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-payments-api-openapi.yml
+- aid: freshbooks:freshbooks-projects-api
+  name: FreshBooks Projects API
+  description: The Projects API from FreshBooks — 1 operation(s) for projects.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-projects-api-openapi.yml
+- aid: freshbooks:freshbooks-tasks-api
+  name: FreshBooks Tasks API
+  description: The Tasks API from FreshBooks — 1 operation(s) for tasks.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-tasks-api-openapi.yml
+- aid: freshbooks:freshbooks-taxes-api
+  name: FreshBooks Taxes API
+  description: The Taxes API from FreshBooks — 1 operation(s) for taxes.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - Taxes
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-taxes-api-openapi.yml
+- aid: freshbooks:freshbooks-timeentries-api
+  name: FreshBooks TimeEntries API
+  description: The TimeEntries API from FreshBooks — 1 operation(s) for timeentries.
+  humanURL: https://www.freshbooks.com/api/start
+  baseURL: https://api.freshbooks.com
+  tags:
+  - TimeEntries
+  properties:
+  - type: OpenAPI
+    url: openapi/freshbooks-timeentries-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/freshbooks-agentic-access.yml
