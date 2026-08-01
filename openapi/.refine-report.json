@@ -1,0 +1,34 @@
+{
+  "provider": "freshbooks",
+  "sources": [
+    "freshbooks-auth-api-openapi.yml",
+    "freshbooks-clients-api-openapi.yml",
+    "freshbooks-estimates-api-openapi.yml",
+    "freshbooks-expenses-api-openapi.yml",
+    "freshbooks-invoices-api-openapi.yml",
+    "freshbooks-items-api-openapi.yml",
+    "freshbooks-payments-api-openapi.yml",
+    "freshbooks-projects-api-openapi.yml",
+    "freshbooks-tasks-api-openapi.yml",
+    "freshbooks-taxes-api-openapi.yml",
+    "freshbooks-timeentries-api-openapi.yml"
+  ],
+  "outputs": [
+    "freshbooks-auth-api-openapi.yml",
+    "freshbooks-clients-api-openapi.yml",
+    "freshbooks-estimates-api-openapi.yml",
+    "freshbooks-expenses-api-openapi.yml",
+    "freshbooks-invoices-api-openapi.yml",
+    "freshbooks-items-api-openapi.yml",
+    "freshbooks-payments-api-openapi.yml",
+    "freshbooks-projects-api-openapi.yml",
+    "freshbooks-tasks-api-openapi.yml",
+    "freshbooks-taxes-api-openapi.yml",
+    "freshbooks-timeentries-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
