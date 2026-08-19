@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreshBooks REST Auth Items API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "listItems",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/items/items",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createItem",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/items/items",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreshBooks REST Auth TimeEntries API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TimeEntries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "listTimeEntries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/timetracking/business/:businessId/time_entries",
+            "params": [
+              {
+                "name": "businessId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createTimeEntry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freshbooks.com/timetracking/business/:businessId/time_entries",
+            "params": [
+              {
+                "name": "businessId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

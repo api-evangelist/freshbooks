@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreshBooks REST Auth Invoices API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "listInvoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/invoices/invoices",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createInvoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/invoices/invoices",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getInvoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/invoices/invoices/:invoiceId",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "updateInvoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/invoices/invoices/:invoiceId",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

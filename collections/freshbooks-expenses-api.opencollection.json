@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreshBooks REST Auth Expenses API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Expenses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "listExpenses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/expenses/expenses",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createExpense",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/expenses/expenses",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getExpense",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/expenses/expenses/:expenseId",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              },
+              {
+                "name": "expenseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "updateExpense",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freshbooks.com/accounting/account/:accountId/expenses/expenses/:expenseId",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "path",
+                "description": "FreshBooks account identifier (business account id)"
+              },
+              {
+                "name": "expenseId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

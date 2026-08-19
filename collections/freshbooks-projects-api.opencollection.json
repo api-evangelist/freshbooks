@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreshBooks REST Auth Projects API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "listProjects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freshbooks.com/projects/business/:businessId/projects",
+            "params": [
+              {
+                "name": "businessId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createProject",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freshbooks.com/projects/business/:businessId/projects",
+            "params": [
+              {
+                "name": "businessId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
