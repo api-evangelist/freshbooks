@@ -47,6 +47,12 @@ apis:
   - Invoicing
   - Expenses
   - Time Tracking
+  - Project
+  tags_raw:
+  - Accounting
+  - Invoicing
+  - Expenses
+  - Time Tracking
   - Projects
   properties:
   - type: Documentation
@@ -65,6 +71,12 @@ apis:
   humanURL: https://www.freshbooks.com/api/webhooks
   baseURL: https://api.freshbooks.com
   tags:
+  - Webhook
+  - Event
+  - Callbacks
+  - Accounting
+  - Invoicing
+  tags_raw:
   - Webhooks
   - Events
   - Callbacks
@@ -82,6 +94,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
@@ -132,6 +146,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -152,6 +168,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -162,6 +180,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -182,6 +202,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Time Entries
+  tags_raw:
   - TimeEntries
   properties:
   - type: OpenAPI
