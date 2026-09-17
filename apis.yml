@@ -209,18 +209,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/freshbooks-taxes-api-openapi.yml
-- aid: freshbooks:freshbooks-timeentries-api
-  name: FreshBooks TimeEntries API
-  description: The TimeEntries API from FreshBooks — 1 operation(s) for timeentries.
+- aid: freshbooks:freshbooks-time-entries-api
+  name: FreshBooks Time Entries API
+  description: The Time Entries API from FreshBooks — 1 operation(s) for time entries.
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
   - Time Entries
-  tags_raw:
-  - TimeEntries
   properties:
   - type: OpenAPI
-    url: openapi/freshbooks-timeentries-api-openapi.yml
+    url: openapi/freshbooks-time-entries-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/freshbooks-agentic-access.yml
