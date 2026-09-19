@@ -205,6 +205,8 @@ apis:
   humanURL: https://www.freshbooks.com/api/start
   baseURL: https://api.freshbooks.com
   tags:
+  - Tax
+  tags_raw:
   - Taxes
   properties:
   - type: OpenAPI
