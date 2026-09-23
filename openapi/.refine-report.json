@@ -1,17 +1,7 @@
 {
   "provider": "freshbooks",
   "sources": [
-    "freshbooks-auth-api-openapi.yml",
-    "freshbooks-clients-api-openapi.yml",
-    "freshbooks-estimates-api-openapi.yml",
-    "freshbooks-expenses-api-openapi.yml",
-    "freshbooks-invoices-api-openapi.yml",
-    "freshbooks-items-api-openapi.yml",
-    "freshbooks-payments-api-openapi.yml",
-    "freshbooks-projects-api-openapi.yml",
-    "freshbooks-tasks-api-openapi.yml",
-    "freshbooks-taxes-api-openapi.yml",
-    "freshbooks-timeentries-api-openapi.yml"
+    "_original/freshbooks-openapi.yml"
   ],
   "outputs": [
     "freshbooks-auth-api-openapi.yml",
@@ -26,9 +16,30 @@
     "freshbooks-taxes-api-openapi.yml",
     "freshbooks-timeentries-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "freshbooks-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "freshbooks-openapi.yml: tagged paths GET /auth/api/v1/users/me -> Auth",
+    "freshbooks-openapi.yml: declared missing tag: Auth",
+    "superseded outputs removed: freshbooks-time-entries-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 13 total)"
+  ],
+  "skipped": [
+    "freshbooks-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-clients-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-estimates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-expenses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-invoices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-payments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-taxes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freshbooks-time-entries-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

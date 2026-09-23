@@ -1,14 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: FreshBooks REST Auth Projects API
+  title: FreshBooks REST Projects API
   version: '2026-05-23'
   description: 'Best-effort OpenAPI 3.1 description of the FreshBooks accounting REST API.
 
     Scoped per account via /accounting/account/{accountId}/* paths.
 
-    Generated from public documentation; not an official spec.
-
-    '
+    Generated from public documentation; not an official spec.'
   contact:
     name: FreshBooks Developer Portal
     url: https://www.freshbooks.com/api/start
@@ -34,6 +32,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Ok'
+      summary: List projects
+      x-summary-source: derived
     post:
       tags:
       - Projects
@@ -47,11 +47,9 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Ok'
+      summary: Create project
+      x-summary-source: derived
 components:
-  schemas:
-    Object:
-      type: object
-      additionalProperties: true
   responses:
     Ok:
       description: Successful response
@@ -59,6 +57,10 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Object'
+  schemas:
+    Object:
+      type: object
+      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http
