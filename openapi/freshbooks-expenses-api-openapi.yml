@@ -78,6 +78,14 @@ paths:
       summary: Update expense
       x-summary-source: derived
 components:
+  parameters:
+    AccountId:
+      in: path
+      name: accountId
+      required: true
+      schema:
+        type: string
+      description: FreshBooks account identifier (business account id)
   responses:
     Ok:
       description: Successful response
@@ -89,14 +97,6 @@ components:
     Object:
       type: object
       additionalProperties: true
-  parameters:
-    AccountId:
-      in: path
-      name: accountId
-      required: true
-      schema:
-        type: string
-      description: FreshBooks account identifier (business account id)
   securitySchemes:
     bearerAuth:
       type: http
