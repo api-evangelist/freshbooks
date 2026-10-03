@@ -78,6 +78,13 @@ paths:
       summary: Update invoice
       x-summary-source: derived
 components:
+  responses:
+    Ok:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Object'
   parameters:
     AccountId:
       in: path
@@ -86,13 +93,6 @@ components:
       schema:
         type: string
       description: FreshBooks account identifier (business account id)
-  responses:
-    Ok:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Object'
   schemas:
     Object:
       type: object
