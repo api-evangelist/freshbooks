@@ -223,6 +223,9 @@ apis:
   - type: OpenAPI
     url: openapi/freshbooks-time-entries-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/freshbooks-capability-edges.yml
+    name: FreshBooks Business Capability Map
   - type: AgenticAccess
     url: agentic-access/freshbooks-agentic-access.yml
   - type: DomainSecurity
