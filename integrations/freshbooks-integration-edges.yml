@@ -1,0 +1,528 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/freshbooks/integrations
+- https://composio.dev/toolkits/freshbooks
+checked:
+- https://composio.dev/toolkits/freshbooks
+- https://monid.ai/tools/freshbooks
+- https://n8n.io/integrations/freshbooks/
+- https://zapier.com/apps/freshbooks/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: freshbooks
+  url: https://zapier.com/apps/freshbooks/integrations
+  external_url: https://www.freshbooks.com/?ref=10350
+  partner_tier: GOLD
+  triggers:
+  - key: client_hook
+    label: New Client
+  - key: estimate_hook
+    label: New Estimate
+  - key: expense_hook
+    label: New Expense
+  - key: invoice_hook
+    label: New Invoice
+  - key: new_bill
+    label: New Bill
+  - key: new_credit_note
+    label: New Credit Note
+  - key: new_filtered_invoice
+    label: New Filtered Invoice
+  - key: new_project_hook
+    label: New Project
+  - key: new_staff_member
+    label: New Staff Member
+  - key: new_vendor
+    label: New Vendor
+  - key: payment_hook
+    label: New Invoice Payment
+  - key: time_entry_hook
+    label: New Time Entry
+  - key: updated_bill
+    label: Updated Bill
+  - key: updated_estimate_hook
+    label: Updated Estimate
+  - key: updated_invoice_hook
+    label: Updated Invoice
+  - key: updated_project_hook
+    label: Updated Project
+  - key: updated_vendor
+    label: Updated Vendor
+  actions:
+  - key: add_payment
+    label: Add Payment to Invoice
+  - key: create_bill
+    label: Create Bill
+  - key: create_checkout_link
+    label: Create Checkout Link
+  - key: create_client
+    label: Create Client
+  - key: create_credit_note
+    label: Create Credit Note
+  - key: create_estimate
+    label: Create Estimate
+  - key: create_expense
+    label: Create Expense
+  - key: create_invoice
+    label: Create Invoice
+  - key: create_invoice_pdf
+    label: Create Invoice PDF
+  - key: create_other_income
+    label: Create Other Income
+  - key: create_project
+    label: Create Project
+  - key: create_recurring_invoice
+    label: Create Recurring Invoice
+  - key: create_time_entry
+    label: Create Time Entry
+  - key: create_vendor
+    label: Create Vendor
+  - key: delete_checkout_link
+    label: Delete Checkout Link
+  - key: send_estimate
+    label: Send Estimate
+  - key: send_invoice
+    label: Send Invoice
+  - key: update_bill
+    label: Update Bill
+  - key: update_checkout_link
+    label: Update Checkout Link
+  - key: update_client
+    label: Create or Update Client
+  - key: update_credit_note
+    label: Update Credit Note
+  - key: update_estimate
+    label: Update Estimate
+  - key: update_invoice
+    label: Create or Update Invoice
+  - key: update_time_entry
+    label: Update Time Entry
+  - key: update_vendor
+    label: Update Vendor
+  searches:
+  - key: find_bill
+    label: Find Bill
+  - key: find_credit_note
+    label: Find Credit Note
+  - key: find_customer
+    label: Find Client
+  - key: find_estimate
+    label: Find Estimate
+  - key: find_invoice
+    label: Find Invoice
+  - key: find_project
+    label: Find Project
+  - key: find_vendor
+    label: Find Vendor
+- marketplace: composio
+  channel: agent-gateway
+  app: freshbooks
+  url: https://composio.dev/toolkits/freshbooks
+  identity: action-prefix
+  actions:
+  - key: FRESHBOOKS_CREATE_WEBHOOK
+  - key: FRESHBOOKS_DELETE_WEBHOOK
+  - key: FRESHBOOKS_GET_BUSINESS_USERS
+  - key: FRESHBOOKS_LIST_BUSINESSES
+  - key: FRESHBOOKS_LIST_CLIENTS
+  - key: FRESHBOOKS_LIST_JOURNAL_ENTRIES2
+  - key: FRESHBOOKS_LIST_PROJECTS
+  - key: FRESHBOOKS_LIST_WEBHOOKS
+  - key: FRESHBOOKS_REGISTER_AS_A_NEW_USER
+  - key: FRESHBOOKS_UPDATE_WEBHOOK
+edges:
+- partner_name: Zoom
+  partner: zoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/zoom
+  direction: third-party
+  category: Video Conferencing
+  partner_url: https://www.zoom.us/
+- partner_name: QuickBooks Online
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/quickbooks
+  direction: third-party
+  category: Accounting
+  partner_url: http://intuit.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/woocommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: https://woocommerce.com/products/woocommerce-zapier/?utm_source=zapier&utm_medium=website&utm_campaign=integration
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Square
+  partner: square
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/square
+  direction: third-party
+  category: eCommerce
+  partner_url: https://squareup.com/t/cmtp_performance/pr_developers/d_partnerships/p_zapier/?route=
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: Expensify
+  partner: expensify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/expensify
+  direction: third-party
+  category: Accounting
+  partner_url: https://www.expensify.com/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: Formstack
+  partner: formstack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/formstack
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://zpr.io/62HTX
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Dubsado
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/dubsado
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.dubsado.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Jotform
+  partner: jotform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/jotform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://www.jotform.com/
+- partner_name: Acuity Scheduling
+  partner: acuity-scheduling
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/acuity-scheduling
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://acuityscheduling.com/?utm_source=zapier.com&utm_medium=referral&utm_campaign=integration-page
+- partner_name: Clockify
+  partner: clockify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/clockify
+  direction: third-party
+  category: Time Tracking Software
+  partner_url: https://clockify.me/
+- partner_name: PandaDoc
+  partner: pandadoc
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/pandadoc
+  direction: third-party
+  category: Documents
+  partner_url: https://www.pandadoc.com/integrations/zapier/?utm_source=zapier-marketplace&utm_medium=partner&utm_campaign=2020-11-inbd-marketplace-websitevisit-pandadoc-zapier-integration
+- partner_name: eBay
+  partner: ebay
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/ebay
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.ebay.com/
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Formidable Forms
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/formidable
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://formidableforms.com/
+- partner_name: Dropbox
+  partner: dropbox
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/dropbox
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://dropbox.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Basecamp
+  partner: basecamp
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/basecamp
+  direction: third-party
+  category: Project Management
+  partner_url: https://basecamp.com/
+- partner_name: Google Forms (Legacy)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/google-forms-legacy
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Freshdesk
+  partner: freshdesk
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/freshdesk
+  direction: third-party
+  category: Customer Support
+  partner_url: http://freshdesk.com/
+- partner_name: Amazon Seller Central
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/amazon-seller-central
+  direction: third-party
+  category: Amazon
+  partner_url: https://sellercentral.amazon.com/
+templates:
+- title: Subscribe new Freshbooks clients to a Mailchimp list
+  url: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
+  apps:
+  - freshbooks
+  - mailchimp
+- title: Add or update Mailchimp subscribers for new clients in FreshBooks New
+  url: https://zapier.com/apps/freshbooks/integrations/mailchimp/186381/add-or-update-mailchimp-subscribers-for-new-clients-in-freshbooks-new
+  apps:
+  - freshbooks
+  - mailchimp
+- title: Add new Freshbooks clients to Google Contacts as new contacts
+  url: https://zapier.com/apps/freshbooks/integrations/google-contacts/13658/add-new-freshbooks-clients-to-google-contacts-as-new-contacts
+  apps:
+  - freshbooks
+  - google-contacts
+- title: Post new FreshBooks payments to a Slack channel
+  url: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
+  apps:
+  - freshbooks
+  - slack
+- title: Create FreshBooks incomes from new Shopify paid orders
+  url: https://zapier.com/apps/freshbooks/integrations/shopify/1586567/create-freshbooks-incomes-from-new-shopify-paid-orders
+  apps:
+  - shopify
+  - freshbooks
+- title: Add new Stripe charges to FreshBooks New as payments
+  url: https://zapier.com/apps/freshbooks/integrations/stripe/14539/add-new-stripe-charges-to-freshbooks-new-as-payments
+  apps:
+  - stripe
+  - freshbooks
+- title: Send Slack channel messages when new FreshBooks New invoices are created
+  url: https://zapier.com/apps/freshbooks/integrations/slack/14537/send-slack-channel-messages-when-new-freshbooks-new-invoices-are-created
+  apps:
+  - freshbooks
+  - slack
+- title: Create FreshBooks incomes for new Stripe payments
+  url: https://zapier.com/apps/freshbooks/integrations/stripe/1229153/create-freshbooks-incomes-for-new-stripe-payments
+  apps:
+  - stripe
+  - freshbooks
+- title: Create Freshbooks Clients from new Jotform submissions
+  url: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
+  apps:
+  - jotform
+  - freshbooks
+- title: Create new FreshBooks clients from new Jobber clients instantly
+  url: https://zapier.com/apps/freshbooks/integrations/jobber/1699813/create-new-freshbooks-clients-from-new-jobber-clients-instantly
+  apps:
+  - jobber
+  - freshbooks
+- title: Create FreshBooks incomes from new HoneyBook payments
+  url: https://zapier.com/apps/freshbooks/integrations/honeybook/1231032/create-freshbooks-incomes-from-new-honeybook-payments
+  apps:
+  - honeybook
+  - freshbooks
+- title: Create time entries in FreshBooks for new or updated events in Google Calendar
+  url: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
+  apps:
+  - google-calendar
+  - freshbooks
+template_total: 620
