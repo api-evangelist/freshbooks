@@ -397,3 +397,1146 @@
   source: edge
   status: pending-generation
   arazzo: null
+- slug: freshbooks-hisab-360-for-excel
+  label: HISAB 360 for Excel
+  partner_name: HISAB 360 for Excel
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/hisab-360-for-excel
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-reviewnudger
+  label: ReviewNudger
+  partner_name: ReviewNudger
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/reviewnudger
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-easycsv
+  label: EasyCSV
+  partner_name: EasyCSV
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/easycsv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-avatax-for-freshbooks
+  label: AvaTax for FreshBooks
+  partner_name: AvaTax for FreshBooks
+  category: Create Proposals
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/avatax-for-freshbooks
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-trophy-jar-reviews
+  label: Trophy Jar Reviews
+  partner_name: Trophy Jar Reviews
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/trophy-jar-reviews
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-paystorm-chase-late-payments
+  label: 'Paystorm: Chase Late Payments'
+  partner_name: 'Paystorm: Chase Late Payments'
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/paystorm:-chase-late-payments
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-invoicesherpa-llc
+  label: InvoiceSherpa LLC
+  partner_name: InvoiceSherpa LLC
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/invoicesherpa-llc
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-centid
+  label: CentID
+  partner_name: CentID
+  category: Mailing and Shipping
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/centid
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-appconnect-freshbooks
+  label: AppConnect - FreshBooks
+  partner_name: AppConnect - FreshBooks
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/appconnect---freshbooks
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-coupler-io
+  label: Coupler.io
+  partner_name: Coupler.io
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/coupler.io
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-tyme-time-tracking
+  label: Tyme - Time Tracking
+  partner_name: Tyme - Time Tracking
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/tyme---time-tracking
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-wagepoint
+  label: Wagepoint
+  partner_name: Wagepoint
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wagepoint
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-apideck
+  label: Apideck
+  partner: apideck
+  partner_name: Apideck
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/apideck
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-connectjunction
+  label: ConnectJunction
+  partner_name: ConnectJunction
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/connectjunction
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-lappa
+  label: Lappa
+  partner_name: Lappa
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/lappa
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-notify-customers-sms
+  label: Notify Customers SMS
+  partner_name: Notify Customers SMS
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/notify-customers-sms
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-collectdesk
+  label: Collectdesk
+  partner_name: Collectdesk
+  category: Book Appointments
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/collectdesk
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-latenode
+  label: Latenode
+  partner: latenode
+  partner_name: Latenode
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/latenode
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-clockk-ai-time-tracking
+  label: Clockk AI Time Tracking
+  partner_name: Clockk AI Time Tracking
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/clockk-ai-time-tracking
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-onepagecrm
+  label: OnePageCRM
+  partner_name: OnePageCRM
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/onepagecrm
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-credit-iq
+  label: Credit-IQ
+  partner_name: Credit-IQ
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/credit-iq
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-devart-ado-net-provider
+  label: Devart ADO.NET Provider
+  partner_name: Devart ADO.NET Provider
+  category: Apps For Developers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/devart-ado.net-provider
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-devart-ssis-components
+  label: Devart SSIS Components
+  partner_name: Devart SSIS Components
+  category: Apps For Developers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/devart-ssis-components
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-excel-add-in-by-devart
+  label: Excel Add-in by Devart
+  partner_name: Excel Add-in by Devart
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/excel-add-in-by-devart
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-forekast
+  label: Forekast
+  partner_name: Forekast
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/forekast
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-taxbandits-1099-for-freshbooks
+  label: TaxBandits 1099 for FreshBooks
+  partner_name: TaxBandits 1099 for FreshBooks
+  category: Prepare Taxes
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/taxbandits-1099-for-freshbooks
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-billbjorn
+  label: BillBjorn
+  partner_name: BillBjorn
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/billbjorn
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-online-check-writer
+  label: Online Check Writer
+  partner_name: Online Check Writer
+  category: Mailing and Shipping
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/online-check-writer
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-sbpay-me
+  label: SBPay.me
+  partner_name: SBPay.me
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sbpay-me
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-turnip
+  label: Turnip
+  partner_name: Turnip
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/turnip
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-syft-analytics
+  label: Syft Analytics
+  partner_name: Syft Analytics
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syft-analytics
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-lendflow
+  label: Lendflow
+  partner_name: Lendflow
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/lendflow
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-payescape
+  label: Payescape
+  partner_name: Payescape
+  category: Run Payroll
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/payescape
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-conduit-power-data-connector
+  label: Conduit – Power Data Connector
+  partner_name: Conduit – Power Data Connector
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/conduit-power-data-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-pidj-texting
+  label: Pidj Texting
+  partner_name: Pidj Texting
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/pidj-texting
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-calendar-import
+  label: Calendar Import
+  partner_name: Calendar Import
+  category: Book Appointments
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/google-calendar
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-invoice-in-style
+  label: Invoice In Style
+  partner_name: Invoice In Style
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/invoice-in-style
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-opencart-carrytheone
+  label: OpenCart (CarryTheOne)
+  partner_name: OpenCart (CarryTheOne)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/opencart-carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-prestashop-carrytheone
+  label: PrestaShop (CarryTheOne)
+  partner_name: PrestaShop (CarryTheOne)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/prestashop-carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-woocommerce-carrytheone
+  label: WooCommerce (CarryTheOne)
+  partner_name: WooCommerce (CarryTheOne)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/woocommerce-carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-toggl-syncing
+  label: Toggl Syncing
+  partner: toggl
+  partner_name: Toggl Syncing
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/toggl-sync
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-merge
+  label: Merge
+  partner: merge
+  partner_name: Merge
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/merge
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-carbonpay
+  label: CarbonPay
+  partner_name: CarbonPay
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/carbon-pay
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-kissflow
+  label: Kissflow
+  partner_name: Kissflow
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/kissflow
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-chargezoom
+  label: Chargezoom
+  partner_name: Chargezoom
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/chargezoom
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-viably
+  label: Viably
+  partner_name: Viably
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/viably
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-surepayroll
+  label: SurePayroll
+  partner_name: SurePayroll
+  category: Run Payroll
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/surepayroll
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-appbind
+  label: AppBind
+  partner_name: AppBind
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/appbind
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-mazuma
+  label: Mazuma
+  partner_name: Mazuma
+  category: Prepare Taxes
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/mazuma
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-wellybox
+  label: WellyBox
+  partner_name: WellyBox
+  category: Prepare Taxes
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wellybox
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-syncbooks
+  label: SyncBooks
+  partner_name: SyncBooks
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syncbooks
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-cashflowmapper
+  label: CashFlowMapper
+  partner_name: CashFlowMapper
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/cashflowmapper
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-sproutanalytics
+  label: sproutAnalytics
+  partner_name: sproutAnalytics
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sproutanalytics
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-magento-adobe-commerce-cto
+  label: Magento/Adobe Commerce (CTO)
+  partner_name: Magento/Adobe Commerce (CTO)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/magento-carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-bigcommerce-carry-the-one
+  label: BigCommerce (Carry The One)
+  partner_name: BigCommerce (Carry The One)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/bigcommerce-carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-shopify-carry-the-one
+  label: Shopify (Carry The One)
+  partner_name: Shopify (Carry The One)
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/carrytheone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-approveit
+  label: Approveit
+  partner_name: Approveit
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/approveit-1
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-freshcurrencies
+  label: FreshCurrencies
+  partner_name: FreshCurrencies
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/fresh-currencies
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-1099smartfile
+  label: 1099SmartFile
+  partner_name: 1099SmartFile
+  category: Prepare Taxes
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/1099smartfile
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-g-accon
+  label: G Accon
+  partner_name: G Accon
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/g-accon
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-nursebuddy
+  label: Nursebuddy
+  partner_name: Nursebuddy
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/nursebuddy-1
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-teamwork-projects
+  label: Teamwork Projects
+  partner: teamwork
+  partner_name: Teamwork Projects
+  category: Manage Projects
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/teamwork-projects
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-campaign-monitor
+  label: Campaign Monitor
+  partner: campaignmonitor
+  partner_name: Campaign Monitor
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/campaign-monitor
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-honeybook
+  label: HoneyBook
+  partner: honeybook
+  partner_name: HoneyBook
+  category: Manage Projects
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/honeybook
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-bigcommerce
+  label: BigCommerce
+  partner: bigcommerce
+  partner_name: BigCommerce
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/bigcommerce
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-todoist
+  label: Todoist
+  partner: todoist
+  partner_name: Todoist
+  category: Manage Team
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/todoist
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-geckoboard
+  label: Geckoboard
+  partner: geckoboard
+  partner_name: Geckoboard
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/geckoboard
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-podia
+  label: Podia
+  partner: podia
+  partner_name: Podia
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/podia
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-calendly
+  label: Calendly
+  partner: calendly
+  partner_name: Calendly
+  category: Book Appointments
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/calendly
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-keap-max-classic
+  label: Keap Max Classic
+  partner_name: Keap Max Classic
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/infusionsoft
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-clio
+  label: Clio
+  partner: clio
+  partner_name: Clio
+  category: Manage Projects
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/clio
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-livechat
+  label: LiveChat
+  partner: livechat
+  partner_name: LiveChat
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/livechat
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-sharpspring
+  label: SharpSpring
+  partner: sharpspring
+  partner_name: SharpSpring
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sharpspring
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-aweber
+  label: AWeber
+  partner: aweber
+  partner_name: AWeber
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/aweber
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-powr-form-builder
+  label: POWr Form Builder
+  partner_name: POWr Form Builder
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/powr-form-builder
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-corpay-one
+  label: Corpay One
+  partner_name: Corpay One
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/corpayone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-agile-crm
+  label: Agile CRM
+  partner: agile-crm
+  partner_name: Agile CRM
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/agile-crm
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-wufoo
+  label: Wufoo
+  partner: wufoo
+  partner_name: Wufoo
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wufoo
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-magento
+  label: Magento
+  partner: magento
+  partner_name: Magento
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/magento
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-klipfolio
+  label: Klipfolio
+  partner_name: Klipfolio
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/klipfolio
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-employment-hero-aus
+  label: Employment Hero-AUS
+  partner_name: Employment Hero-AUS
+  category: Run Payroll
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/employment-hero-aus
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-docusend
+  label: DocuSend
+  partner_name: DocuSend
+  category: Mailing and Shipping
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/docusend
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-glances
+  label: Glances
+  partner_name: Glances
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/glances
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-tallyfor
+  label: Tallyfor
+  partner_name: Tallyfor
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/tallyfor
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-everhour
+  label: Everhour
+  partner: everhour
+  partner_name: Everhour
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/everhour
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-syncwith
+  label: SyncWith
+  partner_name: SyncWith
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syncwith
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-collbox
+  label: Collbox
+  partner_name: Collbox
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/collbox
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-link4
+  label: Link4
+  partner_name: Link4
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/link4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-kaal
+  label: Kaal
+  partner_name: Kaal
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/kaal
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-employment-hero-uk
+  label: Employment Hero-UK
+  partner_name: Employment Hero-UK
+  category: Run Payroll
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/employment-hero
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-mailchimp
+  label: MailChimp
+  partner: mailchimp
+  partner_name: MailChimp
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/mailchimp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-zendesk
+  label: Zendesk
+  partner: zendesk
+  partner_name: Zendesk
+  category: Manage Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/zendesk-for-new-freshbooks
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-insightly
+  label: Insightly
+  partner: insightly
+  partner_name: Insightly
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/insightly
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-apipheny
+  label: Apipheny
+  partner_name: Apipheny
+  category: Analyze Data
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/apipheny
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

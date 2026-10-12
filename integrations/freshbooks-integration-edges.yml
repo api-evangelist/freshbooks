@@ -4,6 +4,7 @@ source:
 - https://zapier.com/apps/freshbooks/integrations
 - https://composio.dev/toolkits/freshbooks
 checked:
+- https://appstore.freshbooks.com/
 - https://composio.dev/toolkits/freshbooks
 - https://monid.ai/tools/freshbooks
 - https://n8n.io/integrations/freshbooks/
@@ -133,6 +134,17 @@ marketplace_apps:
   - key: FRESHBOOKS_LIST_WEBHOOKS
   - key: FRESHBOOKS_REGISTER_AS_A_NEW_USER
   - key: FRESHBOOKS_UPDATE_WEBHOOK
+- marketplace: own
+  channel: partner-built
+  app: freshbooks
+  url: https://appstore.freshbooks.com/
+  app_count: 162
+  adapter: sweep-accounting-stores.py:store_freshbooks
+  listed: 162
+  platform_built: 2
+  partner_built: 136
+  order: created desc (store default)
+  status: ok
 edges:
 - partner_name: Zoom
   partner: zoom
@@ -464,6 +476,1496 @@ edges:
   direction: third-party
   category: Amazon
   partner_url: https://sellercentral.amazon.com/
+- partner_name: HISAB 360 for Excel
+  app: HISAB 360 for Excel
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/hisab-360-for-excel
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://hisab360.net
+- partner_name: ReviewNudger
+  app: ReviewNudger
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/reviewnudger
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.reviewnudger.com
+- partner_name: EasyCSV
+  app: EasyCSV
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/easycsv
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.easycsv.io/?utm_source=freshbooks
+- partner_name: AvaTax for FreshBooks
+  app: AvaTax for FreshBooks
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/avatax-for-freshbooks
+  category: Create Proposals
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://taxiom.com/avatax-for-freshbooks/
+- partner_name: Trophy Jar Reviews
+  app: Trophy Jar Reviews
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/trophy-jar-reviews
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://trophyjar.com/
+- partner_name: 'Paystorm: Chase Late Payments'
+  app: 'Paystorm: Chase Late Payments'
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/paystorm:-chase-late-payments
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://paystorm.ai
+- partner_name: InvoiceSherpa LLC
+  app: InvoiceSherpa LLC
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/invoicesherpa-llc
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.invoicesherpa.com/
+- partner_name: CentID
+  app: CentID
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/centid
+  category: Mailing and Shipping
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.centid.com
+- partner_name: AppConnect - FreshBooks
+  app: AppConnect - FreshBooks
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/appconnect---freshbooks
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://appconnect.goodsamsoftware.com
+- partner_name: Coupler.io
+  app: Coupler.io
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/coupler.io
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.coupler.io/
+- partner_name: Tyme - Time Tracking
+  app: Tyme - Time Tracking
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/tyme---time-tracking
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.tyme-app.com
+- partner_name: Wagepoint
+  app: Wagepoint
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wagepoint
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://bit.ly/3KoL4eA
+- partner_name: Apideck
+  app: Apideck
+  partner: apideck
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/apideck
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.apideck.com/connectors/freshbooks
+- partner_name: ConnectJunction
+  app: ConnectJunction
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/connectjunction
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.cloudjunction.cloud/
+- partner_name: Lappa
+  app: Lappa
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/lappa
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://lappa.org/
+- partner_name: Notify Customers SMS
+  app: Notify Customers SMS
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/notify-customers-sms
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://notifycustomers.net
+- partner_name: Collectdesk
+  app: Collectdesk
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/collectdesk
+  category: Book Appointments
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.collectdesk.com
+- partner_name: Latenode
+  app: Latenode
+  partner: latenode
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/latenode
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://latenode.com/?utm_source=freshbooks
+- partner_name: Clockk AI Time Tracking
+  app: Clockk AI Time Tracking
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/clockk-ai-time-tracking
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://clockk.com
+- partner_name: OnePageCRM
+  app: OnePageCRM
+  partner: null
+  partner_match: null
+  partner_candidate: novus-via
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/onepagecrm
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.onepagecrm.com/?cid=freshbooks
+- partner_name: Credit-IQ
+  app: Credit-IQ
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/credit-iq
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.credit-iq.com
+- partner_name: Devart ADO.NET Provider
+  app: Devart ADO.NET Provider
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/devart-ado.net-provider
+  category: Apps For Developers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.devart.com/odbc/?utm_source=appstore.freshbooks.com&utm_medium=referral&utm_campaign=marketplace_freshbooks
+- partner_name: Devart SSIS Components
+  app: Devart SSIS Components
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/devart-ssis-components
+  category: Apps For Developers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.devart.com/odbc/?utm_source=appstore.freshbooks.com&utm_medium=referral&utm_campaign=marketplace_freshbooks
+- partner_name: Excel Add-in by Devart
+  app: Excel Add-in by Devart
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/excel-add-in-by-devart
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.devart.com/?utm_source=appstore.freshbooks.com&utm_medium=referral&utm_campaign=marketplace_freshbook
+- partner_name: Forekast
+  app: Forekast
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/forekast
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://forekast.co/
+- partner_name: TaxBandits 1099 for FreshBooks
+  app: TaxBandits 1099 for FreshBooks
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/taxbandits-1099-for-freshbooks
+  category: Prepare Taxes
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.taxbandits.com/form-1099-series/integrations/freshbooks/
+- partner_name: BillBjorn
+  app: BillBjorn
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/billbjorn
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.billbjorn.com/freshbooks-data-entry/
+- partner_name: Online Check Writer
+  app: Online Check Writer
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/online-check-writer
+  category: Mailing and Shipping
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://onlinecheckwriter.com
+- partner_name: SBPay.me
+  app: SBPay.me
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sbpay-me
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://sbpay.me
+- partner_name: Turnip
+  app: Turnip
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/turnip
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://turniptimer.com/
+- partner_name: Syft Analytics
+  app: Syft Analytics
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syft-analytics
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.syftanalytics.com/freshbooks/
+- partner_name: Lendflow
+  app: Lendflow
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/lendflow
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://freshbooks-lendflow.webflow.io/
+- partner_name: Payescape
+  app: Payescape
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/payescape
+  category: Run Payroll
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.payescape.com/
+- partner_name: Conduit – Power Data Connector
+  app: Conduit – Power Data Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/conduit-power-data-connector
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://getconduit.app
+- partner_name: Pidj Texting
+  app: Pidj Texting
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/pidj-texting
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://pidj.co/freshbooks
+- partner_name: Calendar Import
+  app: Calendar Import
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://appstore.freshbooks.com/apps/google-calendar
+  category: Book Appointments
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://freshbooks.com
+- partner_name: Invoice In Style
+  app: Invoice In Style
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/invoice-in-style
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://onetracking.gelatech.com/
+- partner_name: OpenCart (CarryTheOne)
+  app: OpenCart (CarryTheOne)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/opencart-carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk/
+- partner_name: PrestaShop (CarryTheOne)
+  app: PrestaShop (CarryTheOne)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/prestashop-carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk/
+- partner_name: WooCommerce (CarryTheOne)
+  app: WooCommerce (CarryTheOne)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/woocommerce-carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk/
+- partner_name: Toggl Syncing
+  app: Toggl Syncing
+  partner: toggl
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/toggl-sync
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://toggl.com/track/
+- partner_name: Merge
+  app: Merge
+  partner: merge
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/merge
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://merge.dev/
+- partner_name: CarbonPay
+  app: CarbonPay
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/carbon-pay
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://carbonpay.io
+- partner_name: Kissflow
+  app: Kissflow
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/kissflow
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://kissflow.com/
+- partner_name: Chargezoom
+  app: Chargezoom
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/chargezoom
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://chargezoom.com/
+- partner_name: Viably
+  app: Viably
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/viably
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.runviably.com/
+- partner_name: SurePayroll
+  app: SurePayroll
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/surepayroll
+  category: Run Payroll
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.surepayroll.com
+- partner_name: AppBind
+  app: AppBind
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/appbind
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.appbind.com
+- partner_name: Mazuma
+  app: Mazuma
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/mazuma
+  category: Prepare Taxes
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: WellyBox
+  app: WellyBox
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wellybox
+  category: Prepare Taxes
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.wellybox.com/?utm_source=freshbooks&utm_campaign=freshbooksas
+- partner_name: SyncBooks
+  app: SyncBooks
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syncbooks
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: http://amiadvanced.com
+- partner_name: CashFlowMapper
+  app: CashFlowMapper
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/cashflowmapper
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://cashflowmapper.com/
+- partner_name: sproutAnalytics
+  app: sproutAnalytics
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sproutanalytics
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://sproutsoft.io/
+- partner_name: Magento/Adobe Commerce (CTO)
+  app: Magento/Adobe Commerce (CTO)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/magento-carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk/
+- partner_name: BigCommerce (Carry The One)
+  app: BigCommerce (Carry The One)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/bigcommerce-carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk/
+- partner_name: Shopify (Carry The One)
+  app: Shopify (Carry The One)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/carrytheone
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.carrytheone.co.uk
+- partner_name: Approveit
+  app: Approveit
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/approveit-1
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://approveit.today
+- partner_name: FreshCurrencies
+  app: FreshCurrencies
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/fresh-currencies
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.freshcurrencies.com/
+- partner_name: 1099SmartFile
+  app: 1099SmartFile
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/1099smartfile
+  category: Prepare Taxes
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.1099smartfile.com/
+- partner_name: G Accon
+  app: G Accon
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/g-accon
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://g-accon.com/
+- partner_name: Nursebuddy
+  app: Nursebuddy
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/nursebuddy-1
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://nursebuddy.co/
+- partner_name: Pipedrive
+  app: Pipedrive
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/pipedrive
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Teamwork Projects
+  app: Teamwork Projects
+  partner: teamwork
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/teamwork-projects
+  category: Manage Projects
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.teamwork.com/projects
+- partner_name: Campaign Monitor
+  app: Campaign Monitor
+  partner: campaignmonitor
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/campaign-monitor
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://help.campaignmonitor.com/?_ga=2.51760302.648297281.1515533130-261737706.1515533130
+- partner_name: HoneyBook
+  app: HoneyBook
+  partner: honeybook
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/honeybook
+  category: Manage Projects
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://help.honeybook.com/
+- partner_name: BigCommerce
+  app: BigCommerce
+  partner: bigcommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/bigcommerce
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.bigcommerce.com/contact/
+- partner_name: Todoist
+  app: Todoist
+  partner: todoist
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/todoist
+  category: Manage Team
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://todoist.com/home
+- partner_name: Geckoboard
+  app: Geckoboard
+  partner: geckoboard
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/geckoboard
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.geckoboard.com/support/
+- partner_name: Podia
+  app: Podia
+  partner: podia
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/podia
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: http://help.podia.com/
+- partner_name: Calendly
+  app: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/calendly
+  category: Book Appointments
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://help.calendly.com/hc/en-us
+- partner_name: Keap Max Classic
+  app: Keap Max Classic
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/infusionsoft
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://zapier.com/apps/freshbooks/integrations/keap-max-classic
+- partner_name: Clio
+  app: Clio
+  partner: clio
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/clio
+  category: Manage Projects
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.clio.com/contact/
+- partner_name: LiveChat
+  app: LiveChat
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/livechat
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.livechatinc.com/kb/
+- partner_name: SharpSpring
+  app: SharpSpring
+  partner: sharpspring
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/sharpspring
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://sharpspring.com/contact-us/
+- partner_name: AWeber
+  app: AWeber
+  partner: aweber
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/aweber
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.aweber.com/contact-us.htm
+- partner_name: POWr Form Builder
+  app: POWr Form Builder
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/powr-form-builder
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://help.powr.io/hc/en-us/requests/new
+- partner_name: Corpay One
+  app: Corpay One
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/corpayone
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://cp.corpayone.com/products/integrations/zapier/
+- partner_name: Agile CRM
+  app: Agile CRM
+  partner: agile-crm
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/agile-crm
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.agilecrm.com/helpdesk
+- partner_name: Wufoo
+  app: Wufoo
+  partner: wufoo
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/wufoo
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://help.wufoo.com/?l=en_US
+- partner_name: Freshdesk
+  app: Freshdesk
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/freshdesk
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://www.freshworks.com/support/
+- partner_name: Magento
+  app: Magento
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/magento
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.magento.com/hc/en-us
+- partner_name: Klipfolio
+  app: Klipfolio
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/klipfolio
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Employment Hero-AUS
+  app: Employment Hero-AUS
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/employment-hero-aus
+  category: Run Payroll
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Zoom
+  app: Zoom
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/zoom
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: DocuSend
+  app: DocuSend
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/docusend
+  category: Mailing and Shipping
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://bit.ly/35riUeM
+- partner_name: Glances
+  app: Glances
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/glances
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.glances.com/hc/en-us
+- partner_name: Tallyfor
+  app: Tallyfor
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/tallyfor
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.tallyfor.com/
+- partner_name: Everhour
+  app: Everhour
+  partner: everhour
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/everhour
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://everhour.com
+- partner_name: SyncWith
+  app: SyncWith
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/syncwith
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://syncwith.com/support
+- partner_name: Collbox
+  app: Collbox
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/collbox
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Link4
+  app: Link4
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/link4
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Kaal
+  app: Kaal
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/kaal
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Employment Hero-UK
+  app: Employment Hero-UK
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/employment-hero
+  category: Run Payroll
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: WooCommerce
+  app: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/woocommerce
+  category: Track Sale Orders
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://woocommerce.com/contact-us/?_ga=2.63645929.798923655.1515535831-20825145.1515535831&_gac=1.192894168.1515535831.Cj0KCQiA7dHSBRDEARIsAJhAHwjYoingM2u31BmnAYpZrsgNpY5wvc349wojEoWI5LQHRD-RX2-BX8AaApYPEALw_wcB
+- partner_name: MailChimp
+  app: MailChimp
+  partner: mailchimp
+  partner_match: domain+name-among-holders
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/mailchimp
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://mailchimp.com/help/
+- partner_name: Zendesk
+  app: Zendesk
+  partner: zendesk
+  partner_match: domain+name-among-holders
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/zendesk-for-new-freshbooks
+  category: Manage Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.zendesk.com/hc/en-us/categories/5283127075226-Apps-and-integrations
+- partner_name: Insightly
+  app: Insightly
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/insightly
+  category: Nurture Customers
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://support.insight.ly/en-US
+- partner_name: Expensify
+  app: Expensify
+  partner: expensify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/expensify
+  category: Manage Finances
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://community.expensify.com/
+- partner_name: Apipheny
+  app: Apipheny
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://appstore.freshbooks.com/apps/apipheny
+  category: Analyze Data
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+  partner_url: https://apipheny.io/support/
+- partner_name: Trello
+  app: Trello
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://appstore.freshbooks.com/apps/trello
+  category: Track Time
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
 templates:
 - title: Subscribe new Freshbooks clients to a Mailchimp list
   url: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
