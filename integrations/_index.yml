@@ -198,7 +198,6 @@
   arazzo: null
 - slug: freshbooks-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -206,7 +205,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/freshbooks/integrations/monday
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: freshbooks-formstack
   label: Formstack
@@ -387,7 +386,6 @@
   arazzo: null
 - slug: freshbooks-amazon-seller-central
   label: Amazon Seller Central
-  partner: amazon-seller-central
   partner_name: Amazon Seller Central
   category: Amazon
   type: marketplace
@@ -395,7 +393,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/freshbooks/integrations/amazon-seller-central
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: freshbooks-hisab-360-for-excel
   label: HISAB 360 for Excel
@@ -1262,7 +1260,6 @@
   arazzo: null
 - slug: freshbooks-livechat
   label: LiveChat
-  partner: livechat
   partner_name: LiveChat
   category: Nurture Customers
   type: marketplace
@@ -1351,7 +1348,6 @@
   arazzo: null
 - slug: freshbooks-magento
   label: Magento
-  partner: magento
   partner_name: Magento
   category: Nurture Customers
   type: marketplace
@@ -1517,7 +1513,6 @@
   arazzo: null
 - slug: freshbooks-insightly
   label: Insightly
-  partner: insightly
   partner_name: Insightly
   category: Nurture Customers
   type: marketplace
