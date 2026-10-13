@@ -1,0 +1,79 @@
+arazzo: 1.0.1
+info:
+  title: FreshBooks Jotform submission create client
+  summary: Create FreshBooks clients from new Jotform submissions
+  description: Reads the submissions of a Jotform form and creates a FreshBooks client from the newest one. Recreated from the Zapier template linked in x-integration.
+  version: 1.0.0
+sourceDescriptions:
+- name: jotformSubmissions
+  url: https://raw.githubusercontent.com/api-evangelist/jotform/refs/heads/main/openapi/jotform-submission-api-openapi.yml
+  type: openapi
+- name: freshbooksClients
+  url: https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/openapi/freshbooks-clients-api-openapi.yml
+  type: openapi
+workflows:
+- workflowId: jotform-submission-freshbooks-client
+  summary: Create a FreshBooks client from a Jotform submission
+  description: List form submissions and create a FreshBooks client from the newest.
+  inputs:
+    type: object
+    required: [formId, accountId, emailQuestionId, nameQuestionId]
+    properties:
+      formId:
+        type: string
+        description: Jotform form id
+      accountId:
+        type: string
+        description: FreshBooks account id
+      emailQuestionId:
+        type: string
+        description: Jotform question id holding the email answer
+      nameQuestionId:
+        type: string
+        description: Jotform question id holding the organization or name answer
+  steps:
+  - stepId: list-submissions
+    description: Read the form submissions.
+    operationId: $sourceDescriptions.jotformSubmissions.getFormSubmissions
+    parameters:
+    - name: formID
+      in: path
+      value: $inputs.formId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      answers: $response.body#/content/0/answers
+  - stepId: create-client
+    description: Create the FreshBooks client.
+    operationId: $sourceDescriptions.freshbooksClients.createClient
+    parameters:
+    - name: accountId
+      in: path
+      value: $inputs.accountId
+    requestBody:
+      contentType: application/json
+      payload:
+        client:
+          email: $steps.list-submissions.outputs.answers
+          organization: $steps.list-submissions.outputs.answers
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      clientId: $response.body#/response/result/client/id
+  outputs:
+    clientId: $steps.create-client.outputs.clientId
+x-integration:
+  partner: jotform
+  template: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
+  edge_evidence: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
+  edge_type: marketplace
+  method: generated
+  generated: '2026-10-13'
+  generator: claude-opus-5.5 market-workflows
+  guessed_steps:
+  - step: list-submissions
+    cause: partner-contract
+    why: the getFormSubmissions 200 response has no schema, so the content/0/answers path is not settled; email and name must be picked from answers by the emailQuestionId/nameQuestionId inputs
+  - step: create-client
+    cause: provider-contract
+    why: createClient takes and returns a generic Object schema, so the client payload shape and the response/result/client/id path are not settled by the spec

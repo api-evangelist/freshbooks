@@ -1,0 +1,66 @@
+arazzo: 1.0.1
+info:
+  title: FreshBooks Slack new payment post
+  summary: Post new FreshBooks payments to a Slack channel
+  description: Reads FreshBooks payments and posts the newest one to a Slack channel. Recreated from the Zapier template linked in x-integration.
+  version: 1.0.0
+sourceDescriptions:
+- name: freshbooksPayments
+  url: https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/openapi/freshbooks-payments-api-openapi.yml
+  type: openapi
+- name: slackChat
+  url: https://raw.githubusercontent.com/api-evangelist/slack/refs/heads/main/openapi/slack-chat-api-openapi.yml
+  type: openapi
+workflows:
+- workflowId: freshbooks-new-payment-slack-post
+  summary: Post the newest FreshBooks payment to Slack
+  description: List FreshBooks payments and post the newest to a Slack channel.
+  inputs:
+    type: object
+    required: [accountId, channel]
+    properties:
+      accountId:
+        type: string
+        description: FreshBooks account id
+      channel:
+        type: string
+        description: Slack channel id
+  steps:
+  - stepId: list-payments
+    description: Read FreshBooks payments.
+    operationId: $sourceDescriptions.freshbooksPayments.listPayments
+    parameters:
+    - name: accountId
+      in: path
+      value: $inputs.accountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      amount: $response.body#/response/result/payments/0/amount/amount
+      invoiceId: $response.body#/response/result/payments/0/invoiceid
+  - stepId: post-message
+    description: Post the payment to Slack.
+    operationId: $sourceDescriptions.slackChat.postChatPostmessage
+    requestBody:
+      contentType: application/x-www-form-urlencoded
+      payload:
+        channel: $inputs.channel
+        text: New FreshBooks payment of {$steps.list-payments.outputs.amount} on invoice {$steps.list-payments.outputs.invoiceId}
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      ts: $response.body#/ts
+  outputs:
+    ts: $steps.post-message.outputs.ts
+x-integration:
+  partner: slack
+  template: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
+  edge_evidence: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
+  edge_type: marketplace
+  method: generated
+  generated: '2026-10-13'
+  generator: claude-opus-5.5 market-workflows
+  guessed_steps:
+  - step: list-payments
+    cause: provider-contract
+    why: listPayments returns a generic Object schema, so the payments/0 amount and invoiceid paths are not settled by the spec

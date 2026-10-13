@@ -1,0 +1,74 @@
+arazzo: 1.0.1
+info:
+  title: FreshBooks Mailchimp new client subscribe
+  summary: Subscribe new FreshBooks clients to a Mailchimp list
+  description: Reads FreshBooks clients and adds the newest one to a Mailchimp audience as a subscribed member. Recreated from the Zapier template linked in x-integration.
+  version: 1.0.0
+sourceDescriptions:
+- name: freshbooksClients
+  url: https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/openapi/freshbooks-clients-api-openapi.yml
+  type: openapi
+- name: mailchimpLists
+  url: https://raw.githubusercontent.com/api-evangelist/mailchimp/refs/heads/main/openapi/mailchimp-lists-api-openapi.yml
+  type: openapi
+workflows:
+- workflowId: freshbooks-new-client-mailchimp-subscribe
+  summary: Subscribe a new FreshBooks client to a Mailchimp list
+  description: List FreshBooks clients and add the newest to a Mailchimp list.
+  inputs:
+    type: object
+    required: [accountId, listId]
+    properties:
+      accountId:
+        type: string
+        description: FreshBooks account id
+      listId:
+        type: string
+        description: Mailchimp list (audience) id
+  steps:
+  - stepId: list-clients
+    description: Read FreshBooks clients.
+    operationId: $sourceDescriptions.freshbooksClients.listClients
+    parameters:
+    - name: accountId
+      in: path
+      value: $inputs.accountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      email: $response.body#/response/result/clients/0/email
+      firstName: $response.body#/response/result/clients/0/fname
+      lastName: $response.body#/response/result/clients/0/lname
+  - stepId: add-member
+    description: Add the client to the Mailchimp list.
+    operationId: $sourceDescriptions.mailchimpLists.postListsIdMembers
+    parameters:
+    - name: list_id
+      in: path
+      value: $inputs.listId
+    requestBody:
+      contentType: application/json
+      payload:
+        email_address: $steps.list-clients.outputs.email
+        status: subscribed
+        merge_fields:
+          FNAME: $steps.list-clients.outputs.firstName
+          LNAME: $steps.list-clients.outputs.lastName
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      memberId: $response.body#/id
+  outputs:
+    memberId: $steps.add-member.outputs.memberId
+x-integration:
+  partner: mailchimp
+  template: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
+  edge_evidence: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
+  edge_type: marketplace
+  method: generated
+  generated: '2026-10-13'
+  generator: claude-opus-5.5 market-workflows
+  guessed_steps:
+  - step: list-clients
+    cause: provider-contract
+    why: listClients returns a generic Object schema, so the response/result/clients/0 email, fname and lname paths are not settled by the spec

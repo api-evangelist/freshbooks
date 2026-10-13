@@ -1,0 +1,88 @@
+arazzo: 1.0.1
+info:
+  title: FreshBooks Google Calendar event time entry
+  summary: Create FreshBooks time entries for Google Calendar events
+  description: Reads events from a Google Calendar in a time window and logs the first as a FreshBooks time entry. Recreated from the Zapier template linked in x-integration.
+  version: 1.0.0
+sourceDescriptions:
+- name: googleCalendars
+  url: https://raw.githubusercontent.com/api-evangelist/google-calendar/refs/heads/main/openapi/google-calendar-calendars-api-openapi.yml
+  type: openapi
+- name: freshbooksTimeEntries
+  url: https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/openapi/freshbooks-time-entries-api-openapi.yml
+  type: openapi
+workflows:
+- workflowId: google-calendar-event-freshbooks-time-entry
+  summary: Log a Google Calendar event as a FreshBooks time entry
+  description: List calendar events in a window and create a FreshBooks time entry for the first.
+  inputs:
+    type: object
+    required: [calendarId, businessId, timeMin]
+    properties:
+      calendarId:
+        type: string
+        description: Google Calendar id
+      businessId:
+        type: string
+        description: FreshBooks business id
+      timeMin:
+        type: string
+        description: RFC3339 lower bound for events
+      durationSeconds:
+        type: integer
+        description: Duration to log, in seconds
+  steps:
+  - stepId: list-events
+    description: Read calendar events since timeMin.
+    operationId: $sourceDescriptions.googleCalendars.listEvents
+    parameters:
+    - name: calendarId
+      in: path
+      value: $inputs.calendarId
+    - name: timeMin
+      in: query
+      value: $inputs.timeMin
+    - name: singleEvents
+      in: query
+      value: true
+    - name: orderBy
+      in: query
+      value: updated
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      summary: $response.body#/items/0/summary
+      startedAt: $response.body#/items/0/start/dateTime
+  - stepId: create-time-entry
+    description: Create the FreshBooks time entry.
+    operationId: $sourceDescriptions.freshbooksTimeEntries.createTimeEntry
+    parameters:
+    - name: businessId
+      in: path
+      value: $inputs.businessId
+    requestBody:
+      contentType: application/json
+      payload:
+        time_entry:
+          is_logged: true
+          started_at: $steps.list-events.outputs.startedAt
+          duration: $inputs.durationSeconds
+          note: $steps.list-events.outputs.summary
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      timeEntryId: $response.body#/time_entry/id
+  outputs:
+    timeEntryId: $steps.create-time-entry.outputs.timeEntryId
+x-integration:
+  partner: google-calendar
+  template: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
+  edge_evidence: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
+  edge_type: marketplace
+  method: generated
+  generated: '2026-10-13'
+  generator: claude-opus-5.5 market-workflows
+  guessed_steps:
+  - step: create-time-entry
+    cause: provider-contract
+    why: createTimeEntry takes and returns a generic Object schema, so the time_entry payload and the time_entry/id output path are not settled; duration is an input because the event end is not subtracted

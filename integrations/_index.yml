@@ -15,8 +15,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
   template: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
   source: template
-  status: pending-generation
-  arazzo: null
+  arazzo: freshbooks-mailchimp-new-client-subscribe.yml
+  status: arazzo
 - slug: freshbooks-add-or-update-mailchimp-subscribers-for-new-clients-in-freshbooks-new
   label: Add or update Mailchimp subscribers for new clients in FreshBooks New
   partner: mailchimp
@@ -29,6 +29,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/mailchimp/186381/add-or-update-mailchimp-subscribers-for-new-clients-in-freshbooks-new
   template: https://zapier.com/apps/freshbooks/integrations/mailchimp/186381/add-or-update-mailchimp-subscribers-for-new-clients-in-freshbooks-new
   source: template
+  related_arazzo:
+  - freshbooks-mailchimp-new-client-subscribe.yml
   status: pending-generation
   arazzo: null
 - slug: freshbooks-post-new-freshbooks-payments-to-a-slack-channel
@@ -43,8 +45,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
   template: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
   source: template
-  status: pending-generation
-  arazzo: null
+  arazzo: freshbooks-slack-new-payment-post.yml
+  status: arazzo
 - slug: freshbooks-create-freshbooks-incomes-from-new-shopify-paid-orders
   label: Create FreshBooks incomes from new Shopify paid orders
   partner: shopify
@@ -71,6 +73,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/slack/14537/send-slack-channel-messages-when-new-freshbooks-new-invoices-are-created
   template: https://zapier.com/apps/freshbooks/integrations/slack/14537/send-slack-channel-messages-when-new-freshbooks-new-invoices-are-created
   source: template
+  related_arazzo:
+  - freshbooks-slack-new-payment-post.yml
   status: pending-generation
   arazzo: null
 - slug: freshbooks-create-freshbooks-clients-from-new-jotform-submissions
@@ -85,8 +89,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
   template: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
   source: template
-  status: pending-generation
-  arazzo: null
+  arazzo: freshbooks-jotform-submission-create-client.yml
+  status: arazzo
 - slug: freshbooks-create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
   label: Create time entries in FreshBooks for new or updated events in Google Calendar
   partner: google-calendar
@@ -99,8 +103,8 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
   template: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
   source: template
-  status: pending-generation
-  arazzo: null
+  arazzo: freshbooks-google-calendar-event-time-entry.yml
+  status: arazzo
 - slug: freshbooks-zoom
   label: Zoom
   partner: zoom
@@ -1496,8 +1500,8 @@
   evidence: https://appstore.freshbooks.com/apps/mailchimp
   source: edge
   relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
+  arazzo: freshbooks-mailchimp-new-client-subscribe.yml
+  status: arazzo
 - slug: freshbooks-zendesk
   label: Zendesk
   partner: zendesk

@@ -2028,3 +2028,7 @@ templates:
   - google-calendar
   - freshbooks
 template_total: 620
+skips:
+- label: Create FreshBooks incomes from new Shopify paid orders
+  cause: partner-contract
+  why: the Shopify specs in the catalog only carry deprecated versioned order-list operations (deprecated_202001_get_orders etc.), no current orders operation to read paid orders from
