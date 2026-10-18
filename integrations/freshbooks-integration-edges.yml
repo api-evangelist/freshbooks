@@ -4,6 +4,7 @@ source:
 - https://zapier.com/apps/freshbooks/integrations
 - https://composio.dev/toolkits/freshbooks
 checked:
+- google-workspace/integrations/google-workspace-integration-edges.yml
 - https://appstore.freshbooks.com/
 - https://composio.dev/toolkits/freshbooks
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
@@ -2109,6 +2110,23 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Google Workspace (own)
+  partner: google-workspace
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://workspace.google.com/marketplace/app/freshbooks_invoicing_addon/35731807065
+  mirror_of: google-workspace/integrations/google-workspace-integration-edges.yml
+  apps:
+  - FreshBooks Invoicing Add-on
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Google Workspace app
 templates:
 - title: Subscribe new Freshbooks clients to a Mailchimp list
   url: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
