@@ -1618,7 +1618,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: freshbooks-fivetran
   label: Fivetran
@@ -1644,7 +1644,7 @@
     - connectors/applications/freshbooks
     vendor_link: https://www.freshbooks.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: freshbooks-meltano
   label: Meltano
@@ -1673,7 +1673,7 @@
     quality:
     - gold
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: freshbooks-google-workspace-own
   label: Google Workspace (own)
