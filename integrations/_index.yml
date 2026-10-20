@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
   template: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
   source: template
+  relationship: ipaas-bridge
   arazzo: freshbooks-mailchimp-new-client-subscribe.yml
   status: arazzo
 - slug: freshbooks-add-or-update-mailchimp-subscribers-for-new-clients-in-freshbooks-new
@@ -31,6 +32,7 @@
   source: template
   related_arazzo:
   - freshbooks-mailchimp-new-client-subscribe.yml
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: freshbooks-post-new-freshbooks-payments-to-a-slack-channel
@@ -45,6 +47,7 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
   template: https://zapier.com/apps/freshbooks/integrations/slack/13711/post-new-freshbooks-payments-to-a-slack-channel
   source: template
+  relationship: ipaas-bridge
   arazzo: freshbooks-slack-new-payment-post.yml
   status: arazzo
 - slug: freshbooks-create-freshbooks-incomes-from-new-shopify-paid-orders
@@ -59,6 +62,7 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/shopify/1586567/create-freshbooks-incomes-from-new-shopify-paid-orders
   template: https://zapier.com/apps/freshbooks/integrations/shopify/1586567/create-freshbooks-incomes-from-new-shopify-paid-orders
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: freshbooks-send-slack-channel-messages-when-new-freshbooks-new-invoices-are-created
@@ -75,6 +79,7 @@
   source: template
   related_arazzo:
   - freshbooks-slack-new-payment-post.yml
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: freshbooks-create-freshbooks-clients-from-new-jotform-submissions
@@ -89,6 +94,7 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
   template: https://zapier.com/apps/freshbooks/integrations/jotform/1152728/create-freshbooks-clients-from-new-jotform-submissions
   source: template
+  relationship: ipaas-bridge
   arazzo: freshbooks-jotform-submission-create-client.yml
   status: arazzo
 - slug: freshbooks-create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
@@ -103,302 +109,9 @@
   evidence: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
   template: https://zapier.com/apps/freshbooks/integrations/google-calendar/1597203/create-time-entries-in-freshbooks-for-new-or-updated-events-in-google-calendar
   source: template
+  relationship: ipaas-bridge
   arazzo: freshbooks-google-calendar-event-time-entry.yml
   status: arazzo
-- slug: freshbooks-zoom
-  label: Zoom
-  partner: zoom
-  partner_name: Zoom
-  category: Video Conferencing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/zoom
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-quickbooks-online
-  label: QuickBooks Online
-  partner_name: QuickBooks Online
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/quickbooks
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: freshbooks-airtable
-  label: Airtable
-  partner: airtable
-  partner_name: Airtable
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/airtable
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-woocommerce
-  label: WooCommerce
-  partner: woocommerce
-  partner_name: WooCommerce
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/woocommerce
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-hubspot
-  label: HubSpot
-  partner: hubspot
-  partner_name: HubSpot
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/hubspot
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-square
-  label: Square
-  partner: square
-  partner_name: Square
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/square
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-clickup
-  label: ClickUp
-  partner: clickup
-  partner_name: ClickUp
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/clickup
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-expensify
-  label: Expensify
-  partner: expensify
-  partner_name: Expensify
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/expensify
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-monday-com
-  label: monday.com
-  partner_name: monday.com
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/monday
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: freshbooks-formstack
-  label: Formstack
-  partner: formstack
-  partner_name: Formstack
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/formstack
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-typeform
-  label: Typeform
-  partner: typeform
-  partner_name: Typeform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/typeform
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-dubsado
-  label: Dubsado
-  partner_name: Dubsado
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/dubsado
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: freshbooks-gravity-forms
-  label: Gravity Forms
-  partner: gravity-forms
-  partner_name: Gravity Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/gravity-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-acuity-scheduling
-  label: Acuity Scheduling
-  partner: acuity-scheduling
-  partner_name: Acuity Scheduling
-  category: Scheduling & Booking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/acuity-scheduling
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-clockify
-  label: Clockify
-  partner: clockify
-  partner_name: Clockify
-  category: Time Tracking Software
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/clockify
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-pandadoc
-  label: PandaDoc
-  partner: pandadoc
-  partner_name: PandaDoc
-  category: Documents
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/pandadoc
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-ebay
-  label: eBay
-  partner: ebay
-  partner_name: eBay
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/ebay
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-pipedrive
-  label: Pipedrive
-  partner: pipedrive
-  partner_name: Pipedrive
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/pipedrive
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-formidable-forms
-  label: Formidable Forms
-  partner_name: Formidable Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/formidable
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: freshbooks-dropbox
-  label: Dropbox
-  partner: dropbox
-  partner_name: Dropbox
-  category: File Management & Storage
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/dropbox
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-basecamp
-  label: Basecamp
-  partner: basecamp
-  partner_name: Basecamp
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/basecamp
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-google-forms-legacy
-  label: Google Forms (Legacy)
-  partner_name: Google Forms (Legacy)
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/google-forms-legacy
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: freshbooks-trello
-  label: Trello
-  partner: trello
-  partner_name: Trello
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/trello
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-freshdesk
-  label: Freshdesk
-  partner: freshdesk
-  partner_name: Freshdesk
-  category: Customer Support
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/freshdesk
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: freshbooks-amazon-seller-central
-  label: Amazon Seller Central
-  partner_name: Amazon Seller Central
-  category: Amazon
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/freshbooks/integrations/amazon-seller-central
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
 - slug: freshbooks-google-workspace-own
   label: Google Workspace (own)
   partner: google-workspace
@@ -1255,6 +968,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: freshbooks-pipedrive
+  label: Pipedrive
+  partner_name: Pipedrive
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/pipedrive
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: freshbooks-teamwork-projects
   label: Teamwork Projects
   partner: teamwork
@@ -1472,6 +1196,18 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: freshbooks-freshdesk
+  label: Freshdesk
+  partner_name: Freshdesk
+  category: Nurture Customers
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/freshdesk
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: freshbooks-magento
   label: Magento
   partner_name: Magento
@@ -1502,6 +1238,17 @@
   type: marketplace
   marketplace: own
   evidence: https://appstore.freshbooks.com/apps/employment-hero-aus
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-zoom
+  label: Zoom
+  partner_name: Zoom
+  category: Track Time
+  type: marketplace
+  marketplace: own
+  evidence: https://appstore.freshbooks.com/apps/zoom
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1611,6 +1358,19 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: freshbooks-woocommerce
+  label: WooCommerce
+  partner: woocommerce
+  partner_name: WooCommerce
+  category: Track Sale Orders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/woocommerce
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: freshbooks-mailchimp
   label: MailChimp
   partner: mailchimp
@@ -1645,6 +1405,19 @@
   marketplace: own
   channel: partner-built
   evidence: https://appstore.freshbooks.com/apps/insightly
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-expensify
+  label: Expensify
+  partner: expensify
+  partner_name: Expensify
+  category: Manage Finances
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appstore.freshbooks.com/apps/expensify
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1699,4 +1472,275 @@
     sources: true
     builder: Pipedream repo (component)
   status: not-a-workflow
+  arazzo: null
+- slug: freshbooks-quickbooks-online
+  label: QuickBooks Online
+  partner: quickbooks
+  partner_name: QuickBooks Online
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/quickbooks
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: freshbooks-airtable
+  label: Airtable
+  partner: airtable
+  partner_name: Airtable
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/airtable
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-hubspot
+  label: HubSpot
+  partner: hubspot
+  partner_name: HubSpot
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/hubspot
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-square
+  label: Square
+  partner: square
+  partner_name: Square
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/square
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-clickup
+  label: ClickUp
+  partner: clickup
+  partner_name: ClickUp
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/clickup
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-monday-com
+  label: monday.com
+  partner: monday-com
+  partner_name: monday.com
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/monday
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-formstack
+  label: Formstack
+  partner: formstack
+  partner_name: Formstack
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/formstack
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-typeform
+  label: Typeform
+  partner: typeform
+  partner_name: Typeform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/typeform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-dubsado
+  label: Dubsado
+  partner_name: Dubsado
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/dubsado
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: freshbooks-gravity-forms
+  label: Gravity Forms
+  partner: gravity-forms
+  partner_name: Gravity Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/gravity-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-acuity-scheduling
+  label: Acuity Scheduling
+  partner: acuity-scheduling
+  partner_name: Acuity Scheduling
+  category: Scheduling & Booking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/acuity-scheduling
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-pandadoc
+  label: PandaDoc
+  partner: pandadoc
+  partner_name: PandaDoc
+  category: Documents
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/pandadoc
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-clockify
+  label: Clockify
+  partner: clockify
+  partner_name: Clockify
+  category: Time Tracking Software
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/clockify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-ebay
+  label: eBay
+  partner: ebay
+  partner_name: eBay
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/ebay
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-formidable-forms
+  label: Formidable Forms
+  partner_name: Formidable Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/formidable
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: freshbooks-dropbox
+  label: Dropbox
+  partner: dropbox
+  partner_name: Dropbox
+  category: File Management & Storage
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/dropbox
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-basecamp
+  label: Basecamp
+  partner: basecamp
+  partner_name: Basecamp
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/basecamp
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-google-forms-legacy
+  label: Google Forms (Legacy)
+  partner: google-forms
+  partner_name: Google Forms (Legacy)
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/google-forms-legacy
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-trello
+  label: Trello
+  partner: trello
+  partner_name: Trello
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/trello
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-amazon-seller-central
+  label: Amazon Seller Central
+  partner: amazon
+  partner_name: Amazon Seller Central
+  category: Amazon
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/amazon-seller-central
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: freshbooks-xero
+  label: Xero
+  partner: xero
+  partner_name: Xero
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/freshbooks/integrations/xero
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
   arazzo: null
