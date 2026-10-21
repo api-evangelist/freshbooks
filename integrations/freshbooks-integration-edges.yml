@@ -19,6 +19,13 @@ checked:
 - https://n8n.io/integrations/freshbooks/
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/freshbooks/integrations
+- https://docs.stripe.com/stripe-apps
+- https://docs.stripe.com/stripe-apps/review-requirements
+- https://marketplace.stripe.com/
+- https://marketplace.stripe.com/appm/apps
+- https://stripe.com/partners/directory
+- https://stripe.com/partners/verified-partners
+- https://stripe.partners/sitemap.xml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -2160,6 +2167,57 @@ edges:
   direction: third-party
   category: Accounting
   partner_url: https://xero5440.partnerlinks.io/uvwuuwrxyoi8
+- partner_name: Stripe Partner Ecosystem
+  partner: stripe
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://stripe.partners/directory/freshbooks-accounting
+  category: Stripe ecosystem partner
+  contract_reference:
+    register: Stripe Partner Ecosystem directory (stripe.com/partners/directory -> stripe.partners, PartnerPage
+      SSR __NUXT_DATA__)
+    standard: Stripe Partner Ecosystem
+    spec_file: null
+    role: stripe-verified-partner
+    registered_name: FreshBooks
+    register_id: freshbooks-accounting
+    partner_tier:
+    - Premier SaaS Platform Partner
+    matched_domain: freshbooks.com
+    matched_by: domain
+    identity_source: the directory's own website field for the partner (no lookup)
+    signal_note: 'certified_products = ONE entry per verified product type (Premier Apps / SaaS Platform / Payments
+      Partner: Stripe verified the product integration; no dates printed, lapsed null = unknown); Premier Services
+      Partner is a services tier (partner_tier only); Certified Professional Developers certify PEOPLE (context);
+      callouts / products never counted'
+    context:
+      callouts:
+      - Accounting
+      - Invoicing and subscriptions
+      stripe_products:
+      - Radar
+      - Instant Payouts
+      - Payments
+      - Radar for Fraud Teams
+      - Sigma
+      - Connect
+      - Invoicing
+      - Tax
+      - Link
+      location: Toronto, Canada
+    detected_by: sweep-stripe-app-marketplace.py
+    detected: '2026-10-21'
+    certified_products:
+    - product: FreshBooks
+      product_type: SaaS platform with embedded Stripe (verified platform integration)
+      certifier: Stripe (Verified Partner program)
+      verification: Premier SaaS Platform Partner
+      lapsed: null
+  detected_by: sweep-stripe-app-marketplace.py
+  first_seen: '2026-10-21'
 templates:
 - title: Subscribe new Freshbooks clients to a Mailchimp list
   url: https://zapier.com/apps/freshbooks/integrations/mailchimp/13707/subscribe-new-freshbooks-clients-to-a-mailchimp-list
