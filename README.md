@@ -1,4 +1,4 @@
-# FreshBooks (freshbooks)
+# FreshBooks
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,87 +66,140 @@
 
 FreshBooks is a cloud-based accounting and small business management platform offering invoicing, expense tracking, time tracking, project management, payments, estimates, and financial reporting for freelancers, self-employed professionals, and small businesses. The FreshBooks REST API provides access to clients, invoices, expenses, estimates, projects, time entries, payments, and reports using OAuth 2.0 Bearer token authentication.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/apis.yml)
+**Areas:** Accounting · Invoicing · Expense Tracking · Time Tracking · Small Business · Bookkeeping · Canada
 
-## Scope
+## FreshBooks on APIs.io
 
-- **Type:** Index
+Everything profiled for FreshBooks is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/freshbooks/](https://apis.io/providers/freshbooks/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (13)
 
-- Accounting
-- Invoicing
-- Expense Tracking
-- Time Tracking
-- Small Business
-- Bookkeeping
+- [FreshBooks REST API](https://apis.io/apis/freshbooks/freshbooks-api/) — REST API for FreshBooks providing CRUD access to clients, invoices, estimates, expenses, projects, time entries, tasks, payments, items, taxes, and…
+- [FreshBooks Webhooks (Callbacks API)](https://apis.io/apis/freshbooks/freshbooks-webhooks/) — Event delivery surface for the FreshBooks Callbacks API. Subscribers register an HTTPS endpoint, complete a verifier handshake, and then receive HMAC-SHA256…
+- [FreshBooks Auth API](https://apis.io/apis/freshbooks/freshbooks-auth-api/) — The Auth API from FreshBooks — 1 operation(s) for auth.
+- [FreshBooks Clients API](https://apis.io/apis/freshbooks/freshbooks-clients-api/) — The Clients API from FreshBooks — 2 operation(s) for clients.
+- [FreshBooks Estimates API](https://apis.io/apis/freshbooks/freshbooks-estimates-api/) — The Estimates API from FreshBooks — 1 operation(s) for estimates.
+- [FreshBooks Expenses API](https://apis.io/apis/freshbooks/freshbooks-expenses-api/) — The Expenses API from FreshBooks — 2 operation(s) for expenses.
+- [FreshBooks Invoices API](https://apis.io/apis/freshbooks/freshbooks-invoices-api/) — The Invoices API from FreshBooks — 2 operation(s) for invoices.
+- [FreshBooks Items API](https://apis.io/apis/freshbooks/freshbooks-items-api/) — The Items API from FreshBooks — 1 operation(s) for items.
+- [FreshBooks Payments API](https://apis.io/apis/freshbooks/freshbooks-payments-api/) — The Payments API from FreshBooks — 1 operation(s) for payments.
+- [FreshBooks Projects API](https://apis.io/apis/freshbooks/freshbooks-projects-api/) — The Projects API from FreshBooks — 1 operation(s) for projects.
+- [FreshBooks Tasks API](https://apis.io/apis/freshbooks/freshbooks-tasks-api/) — The Tasks API from FreshBooks — 1 operation(s) for tasks.
+- [FreshBooks Taxes API](https://apis.io/apis/freshbooks/freshbooks-taxes-api/) — The Taxes API from FreshBooks — 1 operation(s) for taxes.
+- [FreshBooks Time Entries API](https://apis.io/apis/freshbooks/freshbooks-time-entries-api/) — The Time Entries API from FreshBooks — 1 operation(s) for time entries.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### FreshBooks REST API
+Event-driven and webhook contracts.
 
-REST API for FreshBooks providing CRUD access to clients, invoices, estimates, expenses, projects, time entries, tasks, payments, items, taxes, and accounting reports. Uses OAuth 2.0 Bearer tokens and is scoped per account via /accounting/account/{accountId}/* endpoints.
+- [FreshBooks Webhooks (Callbacks API)](https://apis.io/asyncapis/freshbooks/freshbooks-webhooks-asyncapi/)
 
-- **Human URL:** [https://www.freshbooks.com/api/start](https://www.freshbooks.com/api/start)
-- **Base URL:** `https://api.freshbooks.com`
+#### Event channels (1)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Accounting
-- Invoicing
-- Expenses
-- Time Tracking
-- Projects
+- [freshbooks/events](https://apis.io/channels/freshbooks/freshbooks-events/)
 
-#### Properties
+#### Agentic access (1)
 
-- [Documentation](https://www.freshbooks.com/api/start)
-- [Authentication](https://www.freshbooks.com/api/authentication)
-- [Postman  Collection](https://www.freshbooks.com/api/start)
-- [Postman Collection](collections/freshbooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/freshbooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### FreshBooks Webhooks (Callbacks API)
+- [Freshbooks Agentic Access](https://apis.io/agentic-access/freshbooks/freshbooks-agentic-access/)
 
-Event delivery surface for the FreshBooks Callbacks API. Subscribers register an HTTPS endpoint, complete a verifier handshake, and then receive HMAC-SHA256 signed POSTs (application/x-www-form-urlencoded) for noun.verb events across bills, bill vendors, categories, clients, credit notes, estimates, expenses, invoices, items, payments, projects, recurring templates, services, taxes, and time entries.
+#### Collections (12)
 
-- **Human URL:** [https://www.freshbooks.com/api/webhooks](https://www.freshbooks.com/api/webhooks)
-- **Base URL:** `https://api.freshbooks.com`
+Postman and Open Collection request collections.
 
-#### Tags
+- [FreshBooks REST API](https://apis.io/collections/freshbooks/open-freshbooks/)
+- [FreshBooks REST Auth API](https://apis.io/collections/freshbooks/open-freshbooks-auth-api/)
+- [FreshBooks REST Auth Clients API](https://apis.io/collections/freshbooks/open-freshbooks-clients-api/)
+- [FreshBooks REST Auth Estimates API](https://apis.io/collections/freshbooks/open-freshbooks-estimates-api/)
+- [FreshBooks REST Auth Expenses API](https://apis.io/collections/freshbooks/open-freshbooks-expenses-api/)
+- [FreshBooks REST Auth Invoices API](https://apis.io/collections/freshbooks/open-freshbooks-invoices-api/)
+- [FreshBooks REST Auth Items API](https://apis.io/collections/freshbooks/open-freshbooks-items-api/)
+- [FreshBooks REST Auth Payments API](https://apis.io/collections/freshbooks/open-freshbooks-payments-api/)
+- [FreshBooks REST Auth Projects API](https://apis.io/collections/freshbooks/open-freshbooks-projects-api/)
+- [FreshBooks REST Auth Tasks API](https://apis.io/collections/freshbooks/open-freshbooks-tasks-api/)
+- [FreshBooks REST Auth Taxes API](https://apis.io/collections/freshbooks/open-freshbooks-taxes-api/)
+- [FreshBooks REST Auth TimeEntries API](https://apis.io/collections/freshbooks/open-freshbooks-timeentries-api/)
 
-- Webhooks
-- Events
-- Callbacks
-- Accounting
-- Invoicing
+#### Governance rules (1)
 
-#### Properties
+Spectral rulesets for the provider's contracts.
 
-- [Documentation](https://www.freshbooks.com/api/webhooks)
-- [AsyncAPI](https://raw.githubusercontent.com/api-evangelist/freshbooks/refs/heads/main/asyncapi/freshbooks-webhooks-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/freshbooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/freshbooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [FreshBooks — asyncapi rules](https://apis.io/rules/freshbooks/freshbooks-asyncapi-spectral-rules/)
 
-## Common Properties
+#### Security (2)
 
-- [LinkedIn](https://www.linkedin.com/company/freshbooks)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Freshbooks Authentication](https://apis.io/security/freshbooks/freshbooks-authentication/)
+- [Freshbooks Domain Security](https://apis.io/security/freshbooks/freshbooks-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.freshbooks.com)
 - [Documentation](https://www.freshbooks.com/api/start)
-- [Developer  Portal](https://www.freshbooks.com/developers)
-- [Sign Up](https://www.freshbooks.com/signup)
 - [Pricing](https://www.freshbooks.com/pricing)
-- [Login](https://my.freshbooks.com/)
 - [Support](https://support.freshbooks.com/)
 - [Blog](https://www.freshbooks.com/blog)
-- [GitHub Organization](https://github.com/freshbooks)
+- [GitHub](https://github.com/freshbooks)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 52.1 |
+| Contract governance | 11.4 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 17.1 |
+
+**Agent readiness 18.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/freshbooks/](https://apis.io/providers/freshbooks/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FreshBooks: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/freshbooks/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
